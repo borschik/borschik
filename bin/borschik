@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../lib/borschik').main();
+require('../lib/borschik').COA.run(process.argv.slice(2));

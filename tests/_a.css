@@ -1,0 +1,10 @@
+a {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="a/a1.png",bla=1);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="a/a1.png");
+    background-image: url("a/a1.png");
+}
+
+b {
+    background: url("a/a2.png");
+}
+

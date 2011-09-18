@@ -1,7 +1,7 @@
 {
     "name" : "borschik",
     "description" : "Extendable builder for text-based file formats",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "homepage" : "http://github.com/veged/borschik",
     "author" : {
         "name": "Sergey Berezhnoy",
@@ -18,7 +18,9 @@
     "main" : "./lib/borschik.js",
     "bin" : { "borschik" : "./bin/borschik" },
     "dependencies" : {
-        "coa" : ">= 0.0.1"
+        "coa" : ">= 0.0.6",
+        "node-inherit" : ">= 1.0.0",
+        "cssp" : ">= 1.0.0"
     },
     "engines" : [ "node ~0.4.0" ],
     "licenses" : [ { "type" : "AS IS" } ]

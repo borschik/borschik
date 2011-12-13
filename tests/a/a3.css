@@ -1,0 +1,11 @@
+c1 {
+    background: url("//yandex.st");
+}
+
+c2 {
+    background: url('http://yandex.st');
+}
+
+c3 {
+    background: url(http://yandex.st);
+}

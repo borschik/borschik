@@ -17,7 +17,7 @@
     "borschik": "./bin/borschik"
   },
   "dependencies": {
-    "coa": "0.2.x",
+    "coa": "0.3.x",
     "inherit": "1.0.x",
     "cssp": "1.0.x"
   },

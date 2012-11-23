@@ -4,7 +4,9 @@
   "version": "0.0.18",
   "homepage": "http://github.com/veged/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
-  "maintainers": [],
+  "maintainers": [
+    "Sergey Belov <peimei@ya.ru> (http://github.com/arikon)"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/veged/borschik.git"
@@ -24,11 +26,11 @@
     "coffee-script": "*"
   },
   "devDependencies": {
-    "istanbul": "~0.1.11",
+    "istanbul": "~0.1.22",
     "mocha-as-promised": "*",
     "mocha-istanbul": "*",
-    "ometajs": "~3.1.5",
-    "mocha": "~1.6.0"
+    "ometajs": "~3.1.15",
+    "mocha": "~1.7.0"
   },
   "scripts": {
     "test": "make test",
@@ -39,7 +41,7 @@
   ],
   "licenses": [
     {
-      "type": "AS IS"
+      "type": "MIT"
     }
   ],
   "optionalDependencies": {}

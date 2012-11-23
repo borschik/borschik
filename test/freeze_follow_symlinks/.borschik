@@ -1,0 +1,13 @@
+{
+    "paths" : {
+        "./": "//a/b/"
+    },
+
+    "freeze_paths" : {
+        "./": "test/test2/"
+    },
+
+    "follow_symlinks" : {
+        "./" : true
+    }
+}

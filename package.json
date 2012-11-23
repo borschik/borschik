@@ -1,7 +1,7 @@
 {
   "name": "borschik",
   "description": "Extendable builder for text-based file formats",
-  "version": "0.0.13",
+  "version": "0.0.18",
   "homepage": "http://github.com/veged/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "maintainers": [],
@@ -12,20 +12,27 @@
   "directories": {
     "lib": "./lib"
   },
-  "main": "./lib/borschik.js",
   "bin": {
     "borschik": "./bin/borschik"
   },
   "dependencies": {
     "coa": "0.3.x",
     "inherit": "1.0.x",
-    "q": "~0.8.2",
+    "q": "~0.8.10",
     "q-fs": "0.1",
     "cssp": "~1.0.6",
     "coffee-script": "*"
   },
   "devDependencies": {
-    "ometajs": "~3.1.5"
+    "istanbul": "~0.1.11",
+    "mocha-as-promised": "*",
+    "mocha-istanbul": "*",
+    "ometajs": "~3.1.5",
+    "mocha": "~1.6.0"
+  },
+  "scripts": {
+    "test": "make test",
+    "coverage": "make coverage"
   },
   "engines": [
     "node >= 0.6.0"

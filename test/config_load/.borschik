@@ -1,0 +1,9 @@
+{
+    "paths" : {
+        "./": "//test/test/"
+    },
+
+    "freeze_paths" : {
+        "./": "test/test2/"
+    }
+}

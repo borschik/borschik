@@ -11,7 +11,7 @@ tests:
 	./bin/borschik -t css -i tests/a.css -o tests/_a.css
 
 test:
-	node_modules/.bin/mocha
+	$(BIN)/mocha
 
 lib-cov: clean-coverage
 	$(BIN)/istanbul instrument --output lib-cov --no-compact --variable global.__coverage__ lib

@@ -94,13 +94,13 @@ describe('isImageUrl', function() {
     });
 });
 
-function testFreeze(tech, dir, inPath, outPath, okPath) {
+function testFreeze(tech, dir, inPath, outPath, okPath, minimize) {
     inPath = PATH.resolve(PATH.join(__dirname, dir, inPath));
     outPath = PATH.resolve(PATH.join(__dirname, dir, outPath));
     okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
 
     before(function() {
-        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: 'no' });
+        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: minimize });
     });
 
     it('freeze ' + tech + ' ok', function() {
@@ -119,19 +119,19 @@ function testFreeze(tech, dir, inPath, outPath, okPath) {
 }
 
 describe('freeze from .css (-t css)', function() {
-    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css');
+    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', 'no');
 });
 
 describe('freeze from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css');
+    testFreeze('css-fast', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', 'no');
 });
 
 describe('freeze excepts from .css (-t css)', function() {
-    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css');
+    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', 'no');
 });
 
 describe('freeze excepts from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css');
+    testFreeze('css-fast', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', 'no');
 });
 
 describe('followSymlinks', function() {
@@ -211,4 +211,12 @@ describe('freeze options: no', function() {
         FS.unlinkSync(outPath);
     });
 
+});
+
+describe('CSSO yes, tech css', function() {
+    testFreeze('css', 'csso_test', 'a.css', '_a.css', 'ok_css.css', 'yes');
+});
+
+describe('CSSO yes, tech css-fast', function() {
+    testFreeze('css-fast', 'csso_test', 'a.css', '_a.css', 'ok_css.css', 'yes');
 });

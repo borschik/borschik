@@ -100,7 +100,7 @@ function testFreeze(tech, dir, inPath, outPath, okPath) {
     okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
 
     before(function() {
-        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath });
+        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: 'no' });
     });
 
     it('freeze ' + tech + ' ok', function() {
@@ -176,7 +176,7 @@ describe('freeze options: yes', function() {
         path = PATH.resolve(PATH.join(__dirname, 'freeze_basic', 'test', 'test2', 'wFPs-e1B3wMRud8TzGw7YHjS08I.png'));
 
     before(function() {
-        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, freeze: 'yes' });
+        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, freeze: 'yes', minimize: 'no' });
     });
 
     it('freeze yes', function() {

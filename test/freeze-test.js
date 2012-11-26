@@ -220,3 +220,26 @@ describe('CSSO yes, tech css', function() {
 describe('CSSO yes, tech css-fast', function() {
     testFreeze('css-fast', 'csso_test', 'a.css', '_a.css', 'ok_css.css', 'yes');
 });
+
+describe('UglifyJS yes, tech js', function() {
+    var dir = 'uglifyjs_test',
+        inPath = 'test.js',
+        outPath = '_test.js',
+        okPath = 'ok_js.js';
+
+    inPath = PATH.resolve(PATH.join(__dirname, dir, inPath));
+    outPath = PATH.resolve(PATH.join(__dirname, dir, outPath));
+    okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
+
+    before(function() {
+        return BORSCHIK.api({ tech: 'js', input: inPath, output: outPath });
+    });
+
+    it('UglifyJS ok', function() {
+        ASSERT.equal(readFile(outPath).toString(), readFile(okPath).toString());
+    });
+
+    after(function() {
+        FS.unlinkSync(outPath);
+    });
+});

@@ -94,13 +94,13 @@ describe('isImageUrl', function() {
     });
 });
 
-function testFreeze(tech, dir, inPath, outPath, okPath, minimize) {
+function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {
     inPath = PATH.resolve(PATH.join(__dirname, dir, inPath));
     outPath = PATH.resolve(PATH.join(__dirname, dir, outPath));
     okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
 
     before(function() {
-        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: minimize });
+        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, freeze: freeze, minimize: minimize });
     });
 
     it('freeze ' + tech + ' ok', function() {
@@ -119,19 +119,19 @@ function testFreeze(tech, dir, inPath, outPath, okPath, minimize) {
 }
 
 describe('freeze from .css (-t css)', function() {
-    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', 'no');
+    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('freeze from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', 'no');
+    testFreeze('css-fast', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('freeze excepts from .css (-t css)', function() {
-    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', 'no');
+    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('freeze excepts from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', 'no');
+    testFreeze('css-fast', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('followSymlinks', function() {
@@ -176,7 +176,7 @@ describe('freeze options: yes', function() {
         path = PATH.resolve(PATH.join(__dirname, 'freeze_basic', 'test', 'test2', 'wFPs-e1B3wMRud8TzGw7YHjS08I.png'));
 
     before(function() {
-        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, freeze: 'yes', minimize: 'no' });
+        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, minimize: true });
     });
 
     it('freeze yes', function() {
@@ -199,7 +199,7 @@ describe('freeze options: no', function() {
         path = PATH.resolve(PATH.join(__dirname, 'freeze_basic', 'test', 'test2', 'wFPs-e1B3wMRud8TzGw7YHjS08I.png'));
 
     before(function() {
-        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, freeze: 'no' });
+        return BORSCHIK.api({ tech: 'css', input: inPath, output: outPath, freeze: false });
     });
 
     it('freeze no', function() {
@@ -214,20 +214,20 @@ describe('freeze options: no', function() {
 });
 
 describe('CSSO yes, tech css', function() {
-    testFreeze('css', 'csso_test', 'a.css', '_a.css', 'ok_css.css', 'yes');
+    testFreeze('css', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
 });
 
 describe('CSSO yes, tech css-fast', function() {
-    testFreeze('css-fast', 'csso_test', 'a.css', '_a.css', 'ok_css.css', 'yes');
+    testFreeze('css-fast', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
 });
 
-function testJS(tech, dir, inPath, outPath, okPath, minimize) {
+function testJS(tech, dir, inPath, outPath, okPath) {
     inPath = PATH.resolve(PATH.join(__dirname, dir, inPath));
     outPath = PATH.resolve(PATH.join(__dirname, dir, outPath));
     okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
 
     before(function() {
-        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: minimize });
+        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, minimize: true });
     });
 
     it('UglifyJS, tech ' + tech + ' ok', function() {
@@ -240,9 +240,9 @@ function testJS(tech, dir, inPath, outPath, okPath, minimize) {
 }
 
 describe('UglifyJS yes, tech js', function() {
-    testJS('js', 'uglifyjs_test', 'test.js', '_test.js', 'ok_js.js', 'yes');
+    testJS('js', 'uglifyjs_test', 'test.js', '_test.js', 'ok_js.js');
 });
 
 describe('UglifyJS yes, tech js+coffee', function() {
-    testJS('js+coffee', 'uglifyjs_test', 'test.coffee', '_test.js', 'ok_jscoffee.js', 'yes');
+    testJS('js+coffee', 'uglifyjs_test', 'test.coffee', '_test.js', 'ok_jscoffee.js');
 });

@@ -22,6 +22,7 @@
     "inherit": "1.0.x",
     "q": "~0.8.10",
     "q-fs": "0.1",
+    "ometajs": "~3.1.15",
     "cssp": "~1.0.6",
     "coffee-script": "*",
     "csso": "~1.3.6",
@@ -31,7 +32,6 @@
     "istanbul": "~0.1.22",
     "mocha-as-promised": "*",
     "mocha-istanbul": "*",
-    "ometajs": "~3.1.15",
     "mocha": "~1.7.0"
   },
   "scripts": {

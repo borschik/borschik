@@ -1,8 +1,8 @@
-var FREEZE = require('..').freeze,
-    FS = require('fs'),
+var BORSCHIK = require('..'),
+    FREEZE = require('..').freeze,
+    FS = BORSCHIK.require('./fs'),
     PATH = require('path'),
     ASSERT = require('assert'),
-    BORSCHIK = require('..'),
 
     testImagePath = 'test.png';
 

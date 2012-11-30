@@ -6,6 +6,16 @@ var BORSCHIK = require('..'),
 
     testImagePath = 'test.png';
 
+/**
+ * Mocha BDD interface.
+ */
+/** @name describe @function */
+/** @name it @function */
+/** @name before @function */
+/** @name after @function */
+/** @name beforeEach @function */
+/** @name afterEach @function */
+
 function loadTestImage(path) {
     return readFile(path || testImagePath);
 }

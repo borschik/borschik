@@ -91,17 +91,22 @@ describe('freeze', function() {
     });
 });
 
-describe('isImageUrl', function() {
+describe('isFreezableUrl', function() {
 
-    it('isImageUrl ok', function() {
-        ASSERT.ok(FREEZE.isImageUrl('xxx.jpg'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.jpeg'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.ico'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.png'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.gif'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.svg'));
-        ASSERT.ok(FREEZE.isImageUrl('xxx.swf'));
+    it('isFreezableUrl ok', function() {
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.jpg'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.jpeg'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.ico'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.png'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.gif'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.svg'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.swf'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.ttf'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.eot'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.otf'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.woff'));
     });
+
 });
 
 function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {

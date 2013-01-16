@@ -57,7 +57,7 @@ describe('freeze-html', function() {
                     'input': fakeFile,
                     'minimize': true,
                     'output': fakeResFile,
-                    'tech': 'lib/techs/html'
+                    'tech': 'html'
                 })
                 .then(function() {
                     try {

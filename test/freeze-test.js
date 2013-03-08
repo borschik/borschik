@@ -261,3 +261,11 @@ describe('UglifyJS yes, tech js', function() {
 describe('UglifyJS yes, tech js+coffee', function() {
     testJS('js+coffee', 'uglifyjs_test', 'test.coffee', '_test.js', 'ok_jscoffee.js');
 });
+
+describe('freeze AlphaImageLoader from .css (-t css)', function() {
+    testFreeze('css', 'freeze_alphaimageloader', 'test.css', '_test.css', 'ok_css.css', true, false);
+});
+
+describe('freeze AlphaImageLoader from .css (-t css-ometajs)', function() {
+    testFreeze('css-ometajs', 'freeze_alphaimageloader', 'test.css', '_test.css', 'ok_css.css', true, false);
+});

@@ -137,16 +137,16 @@ describe('freeze from .css (-t css)', function() {
     testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
-describe('freeze from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
+describe('freeze from .css (-t css-ometajs)', function() {
+    testFreeze('css-ometajs', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('freeze excepts from .css (-t css)', function() {
     testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
-describe('freeze excepts from .css (-t css-fast)', function() {
-    testFreeze('css-fast', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
+describe('freeze excepts from .css (-t css-ometajs)', function() {
+    testFreeze('css-ometajs', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
 });
 
 describe('followSymlinks', function() {
@@ -232,8 +232,8 @@ describe('CSSO yes, tech css', function() {
     testFreeze('css', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
 });
 
-describe('CSSO yes, tech css-fast', function() {
-    testFreeze('css-fast', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
+describe('CSSO yes, tech css-ometajs', function() {
+    testFreeze('css-ometajs', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
 });
 
 function testJS(tech, dir, inPath, outPath, okPath) {

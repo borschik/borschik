@@ -1,4 +1,6 @@
 a {
     filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test/test.png',sizingMethod=crop);
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://test/test.png');
     filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='test.png',sizingMethod=crop);
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='test.png');
 }

@@ -6,9 +6,9 @@ describe('techs/js-link', function() {
     var FS = require('fs');
     var BORSCHIK = require('borschik');
 
-    const fakeFile = PATH.resolve('test/js-link/test.js');
-    const fakeResFile = PATH.resolve('test/js-link/_test.js');
-    const freezeDir = PATH.resolve('test/js-link/_');
+    const fakeFile = PATH.resolve(__dirname, 'js-link/test.js');
+    const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.js');
+    const freezeDir = PATH.resolve(__dirname, 'js-link/_');
 
     afterEach(function(cb) {
         require('child_process').exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
@@ -17,45 +17,45 @@ describe('techs/js-link', function() {
     });
 
     const TESTS = [
-        // single quote
         {
+            'name': 'img in single quote',
             'in': "var a = borschik.link('1.png');",
             'out': 'var a = "//yandex.st/prj/_/jUK5O9GsS2gPWOhRMeBxR0GThf0.png";'
         },
-        // double quote
         {
+            'name': 'img in double quote',
             'in': 'var a = borschik.link("1.png");',
             'out': 'var a = "//yandex.st/prj/_/jUK5O9GsS2gPWOhRMeBxR0GThf0.png";'
         },
-        // inline comment
         {
+            'name': 'img in inline comment',
             'in': '//var a = borschik.link("1.png");',
             'out': '//var a = borschik.link("1.png");'
         },
-        // block comment
         {
+            'name': 'img in block comment',
             'in': '/*var a = borschik.link("1" + ".png");*/',
             'out': '/*var a = borschik.link("1" + ".png");*/'
         },
-        // block comment with line breaks
         {
+            'name': 'img in block comment with line breaks',
             'in': '/*\nvar e = borschik.link("1" + ".png");\n*/',
             'out': '/*\nvar e = borschik.link("1" + ".png");\n*/'
         },
-        // dynamic entity 1
         {
+            'name': 'dynamic link 1',
             'in': 'var f = borschik.link("1" + ".png");',
             'out': 'var f = borschik.link("1" + ".png");'
         },
-        // dynamic entity 2
         {
+            'name': 'dynamic link 2',
             'in': 'var f = borschik.link("@1.png");',
             'out': 'var f = borschik.link("@1.png");'
         }
     ];
 
     TESTS.forEach(function(test, i) {
-        it('js-link test '+ i, function(cb) {
+        it('js-link test ' + test.name, function(cb) {
 
             // write test file
             FS.writeFileSync(fakeFile, test.in, 'utf-8');

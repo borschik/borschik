@@ -6,9 +6,9 @@ describe('techs/json-links', function() {
     var FS = require('fs');
     var BORSCHIK = require('borschik');
 
-    const fakeFile = PATH.resolve('test/js-link/test.json');
-    const fakeResFile = PATH.resolve('test/js-link/_test.json');
-    const freezeDir = PATH.resolve('test/js-link/_');
+    const fakeFile = PATH.resolve(__dirname, 'js-link/test.json');
+    const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.json');
+    const freezeDir = PATH.resolve(__dirname, 'js-link/_');
 
     afterEach(function(cb) {
         require('child_process').exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
@@ -25,7 +25,7 @@ describe('techs/json-links', function() {
     ];
 
     TESTS.forEach(function(test, i) {
-        it('json-lnnks test ' + i, function(cb) {
+        it('json-links test ' + i, function(cb) {
 
             // write test file
             FS.writeFileSync(fakeFile, test.in, 'utf-8');

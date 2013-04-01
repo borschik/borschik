@@ -6,9 +6,9 @@ describe('freeze-html', function() {
     var FS = require('fs');
     var BORSCHIK = require('borschik');
 
-    const fakeFile = PATH.resolve('test/freeze_html/test.html');
-    const fakeResFile = PATH.resolve('test/freeze_html/_test.html');
-    const freezeDir = PATH.resolve('test/freeze_html/_');
+    const fakeFile = PATH.resolve(__dirname, 'freeze_html/test.html');
+    const fakeResFile = PATH.resolve(__dirname, 'freeze_html/_test.html');
+    const freezeDir = PATH.resolve(__dirname, 'freeze_html/_');
 
     afterEach(function(cb) {
         require('child_process').exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {

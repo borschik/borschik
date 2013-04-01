@@ -39,8 +39,8 @@ describe('freeze-html', function() {
         },
         {
             'name': 'several line comment',
-            'in': '<!-- <script src="1.js"></script> -->',
-            'out': '<!-- <script src="1.js"></script> -->'
+            'in': '<!--\n<script src="1.js"></script>\n-->',
+            'out': '<!--\n<script src="1.js"></script>\n-->'
         }
     ];
 

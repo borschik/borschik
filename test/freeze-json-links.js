@@ -4,14 +4,15 @@ describe('techs/json-links', function() {
 
     var PATH = require('path');
     var FS = require('fs');
-    var BORSCHIK = require('borschik');
+    var BORSCHIK = require('..');
+    var CP = require('child_process');
 
     const fakeFile = PATH.resolve(__dirname, 'js-link/test.json');
     const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.json');
     const freezeDir = PATH.resolve(__dirname, 'js-link/_');
 
     afterEach(function(cb) {
-        require('child_process').exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
+        CP.exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
             cb();
         });
     });
@@ -37,7 +38,7 @@ describe('techs/json-links', function() {
                     'input': fakeFile,
                     'minimize': true,
                     'output': fakeResFile,
-                    'tech': 'lib/techs/json-links'
+                    'tech': 'json-links'
                 })
                 .then(function() {
                     try {

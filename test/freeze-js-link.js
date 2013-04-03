@@ -4,14 +4,15 @@ describe('techs/js-link', function() {
 
     var PATH = require('path');
     var FS = require('fs');
-    var BORSCHIK = require('borschik');
+    var BORSCHIK = require('..');
+    var CP = require('child_process');
 
     const fakeFile = PATH.resolve(__dirname, 'js-link/test.js');
     const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.js');
     const freezeDir = PATH.resolve(__dirname, 'js-link/_');
 
     afterEach(function(cb) {
-        require('child_process').exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
+        CP.exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
             cb();
         });
     });
@@ -67,7 +68,7 @@ describe('techs/js-link', function() {
                     'input': fakeFile,
                     'minimize': true,
                     'output': fakeResFile,
-                    'tech': 'lib/techs/js-link'
+                    'tech': 'js-link'
                 })
                 .then(function() {
                     try {

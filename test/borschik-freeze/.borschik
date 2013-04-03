@@ -1,0 +1,9 @@
+{
+    "paths" : {
+        "_": "//yandex.st/prj/_"
+    },
+
+    "freeze_paths" : {
+        "./": "_"
+    }
+}

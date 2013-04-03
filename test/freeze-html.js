@@ -4,7 +4,7 @@ describe('freeze-html', function() {
 
     var PATH = require('path');
     var FS = require('fs');
-    var BORSCHIK = require('borschik');
+    var BORSCHIK = require('..');
 
     const fakeFile = PATH.resolve(__dirname, 'freeze_html/test.html');
     const fakeResFile = PATH.resolve(__dirname, 'freeze_html/_test.html');

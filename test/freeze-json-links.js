@@ -21,7 +21,7 @@ describe('techs/json-links', function() {
         // simple json
         {
             'in': '{"img1": "1.png","css": "1.css"}',
-            'out': '{"img1":"//yandex.st/prj/_/jUK5O9GsS2gPWOhRMeBxR0GThf0.png","css":"//yandex.st/prj/1.0.0/1.css"}'
+            'out': '{"img1":"//yandex.st/prj/_/jUK5O9GsS2gPWOhRMeBxR0GThf0.png","css":"//yandex.st/prj/_/ZJqDxMPcZv60k4hy26rNTMwYFzc.css"}'
         }
     ];
 

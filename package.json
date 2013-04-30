@@ -32,7 +32,7 @@
     "istanbul": "~0.1.22",
     "mocha-as-promised": "*",
     "mocha-istanbul": "*",
-    "mocha": "~1.7.0"
+    "mocha": "~1.8.0"
   },
   "scripts": {
     "test": "make test",

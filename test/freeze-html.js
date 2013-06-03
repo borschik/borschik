@@ -41,6 +41,16 @@ describe('freeze-html', function() {
             'name': 'several line comment',
             'in': '<!--\n<script src="1.js"></script>\n-->',
             'out': '<!--\n<script src="1.js"></script>\n-->'
+        },
+        {
+            'name': 'ie6.css',
+            'in': '<!--[if IE 6]><link rel="stylesheet" href="1.css"/><![endif]-->',
+            'out': '<!--[if IE 6]><link rel="stylesheet" href="//yandex.st/prj/_/gKaG181G8PenscQiAxl262QG4h0.css"/><![endif]-->'
+        },
+        {
+            'name': 'ie9.css',
+            'in': '<!--[if gt IE 9]><!--><link rel="stylesheet" href="1.css"/><!--<![endif]-->',
+            'out': '<!--[if gt IE 9]><!--><link rel="stylesheet" href="//yandex.st/prj/_/gKaG181G8PenscQiAxl262QG4h0.css"/><!--<![endif]-->'
         }
     ];
 

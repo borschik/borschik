@@ -1,1 +1,1 @@
-function test(e,t){return e+t}
+function test(t,n){return t+n}

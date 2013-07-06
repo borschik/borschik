@@ -66,9 +66,9 @@ describe('techs/js-link', function() {
                 .api({
                     'freeze': true,
                     'input': fakeFile,
-                    'minimize': true,
+                    'minimize': false,
                     'output': fakeResFile,
-                    'tech': 'js-link'
+                    'tech': 'js'
                 })
                 .then(function() {
                     try {

@@ -1,14 +1,11 @@
 BIN = ./node_modules/.bin
 
-.PHONY: all tests test
+.PHONY: all test
 
 all: $(patsubst %.ometajs,%.ometajs.js,$(shell find lib -name '*.ometajs'))
 
 %.ometajs.js: %.ometajs
 	$(BIN)/ometajs2js -b -i $< -o $@
-
-tests:
-	./bin/borschik -t css -i tests/a.css -o tests/_a.css
 
 test:
 	$(BIN)/mocha

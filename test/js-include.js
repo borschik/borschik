@@ -16,7 +16,9 @@ describe('js-include:', function() {
 
     const TESTS = [
         {name: 'should joins /* borschik:include: */', file: 'include1.js'},
-        {name: 'should joins "borschik:include:"', file: 'include2.js'}
+        {name: 'should joins "borschik:include:"', file: 'include2.js'},
+        {name: 'should save block comments in right place', file: 'include3.js'},
+        {name: 'should save inline comments in right place', file: 'include4.js'}
     ];
 
     TESTS.forEach(function(test) {

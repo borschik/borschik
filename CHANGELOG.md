@@ -1,3 +1,14 @@
+## 0.3.3 (July 18, 2013)
+Update dependencies versions
+
+- coa ~0.4.0
+- inherit ~1.0.4
+- q ~0.9.5
+- ometajs ~3.2.4
+- uglify-js ~2.3.6
+- istanbul ~0.1.42
+- mocha ~1.12.0
+
 ## 0.3.2 (July 06, 2013)
 - UglifyJS updated to ~2.3
 - CSSO updated to 1.3.7

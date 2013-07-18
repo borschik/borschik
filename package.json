@@ -18,21 +18,21 @@
     "borschik": "./bin/borschik"
   },
   "dependencies": {
-    "coa": "0.3.x",
-    "inherit": "1.0.x",
-    "q": "~0.8.10",
-    "q-fs": "0.1",
-    "ometajs": "~3.1.15",
+    "coa": "~0.4.0",
+    "inherit": "~1.0.4",
+    "q": "~0.9.5",
+    "q-io": "~1.9.1",
+    "ometajs": "~3.2.4",
     "cssp": "~1.0.6",
     "coffee-script": "*",
     "csso": "~1.3.7",
-    "uglify-js": "~2.3"
+    "uglify-js": "~2.3.6"
   },
   "devDependencies": {
-    "istanbul": "~0.1.22",
+    "istanbul": "~0.1.42",
     "mocha-as-promised": "*",
     "mocha-istanbul": "*",
-    "mocha": "~1.8.0"
+    "mocha": "~1.12.0"
   },
   "scripts": {
     "test": "make test",

@@ -1,6 +1,7 @@
 # Borschik
 [![Build Status](https://secure.travis-ci.org/bem/borschik.png?branch=master)](http://travis-ci.org/bem/borschik)
 [![NPM version](https://badge.fury.io/js/borschik.png)](http://badge.fury.io/js/borschik)
+[![Dependency Status](https://david-dm.org/bem/borschik.png)](https://david-dm.org/bem/borschik)
 
 Borschik is an extendable builder for text-based file formats.
 It's main purpose is the assembly of static files for web projects (CSS, JS, etc.).

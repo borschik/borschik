@@ -38,11 +38,11 @@ borschik [OPTIONS]
                                                                           [string]
     -o OUTPUT, --output=OUTPUT          Выходной файл (обязательная)
                                                                           [string]
-    -f FREEZE, --freeze=FREEZE          Заморозка ссылок на статические ресурсы (по умолчанию: yes)
+    -f FREEZE, --freeze=FREEZE          Заморозка ссылок на статические ресурсы (по умолчанию: true)
                                                                           [boolean]
-    -m MINIMIZE, --minimize=MINIMIZE    Минимизация входного файла (по умолчанию: yes)
+    -m MINIMIZE, --minimize=MINIMIZE    Минимизация входного файла (по умолчанию: true)
                                                                           [boolean]
-    -c COMMENTS, --comments=COMMENTS    Оборачивать склееные файлы в поясняющие комментарии (по умолчанию: yes)
+    -c COMMENTS, --comments=COMMENTS    Поясняющие комментарии к склееным файлам (по умолчанию: true)
                                                                           [boolean]
 
 ## Поддерживаемые технологии

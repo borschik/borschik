@@ -38,11 +38,11 @@ The available options are:
                                                                           [string]
     -o OUTPUT, --output=OUTPUT          Output file (required)
                                                                           [string]
-    -f FREEZE, --freeze=FREEZE          Freeze links to static files (default: yes)
+    -f FREEZE, --freeze=FREEZE          Freeze links to static files (default: true)
                                                                           [boolean]
-    -m MINIMIZE, --minimize=MINIMIZE    Minimize resulting content (default: yes)
+    -m MINIMIZE, --minimize=MINIMIZE    Minimize resulting content (default: true)
                                                                           [boolean]
-    -c COMMENTS, --comments=COMMENTS    Wrap included files with comments (default: yes)
+    -c COMMENTS, --comments=COMMENTS    Wrap included files with comments (default: true)
                                                                           [boolean]
 
 ## Technologies support

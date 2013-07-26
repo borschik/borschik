@@ -10,7 +10,7 @@ It's main purpose is the assembly of static files for web projects (CSS, JS, etc
 
 [Documentation](./docs/index/index.en.md)
 
-You can get more info in [article at bem.info](http://bem.info/articles/borschik)
+[Article at bem.info](http://bit.ly/en-borschik)
 
 #Русский
 Borschik — это расширяемый сборщик файлов текстовых форматов.
@@ -19,7 +19,7 @@ Borschik — это расширяемый сборщик файлов текс�
 
 [Документация](./docs/index/index.ru.md)
 
-[Статья про Borschik на bem.info](http://ru.bem.info/articles/borschik/)
+[Статья про Borschik на bem.info](http://bit.ly/ru-borschik)
 
 <!-- Yandex.Metrika counter -->
 <img src="https://mc.yandex.ru/watch/12831025" style="position:absolute; left:-9999px;" alt="" />

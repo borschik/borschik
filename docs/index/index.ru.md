@@ -55,7 +55,7 @@ borschik [OPTIONS]
 | Минимизация       | CSSO | -      | UglifyJS  | X      |
 
 ## Описание файла .borschik
-```
+```js
 {
   // path-mapping для обработки ссылок
   // <prefix-for-new-path> может быть относительным или абсолютным урлом

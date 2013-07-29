@@ -3,12 +3,23 @@
 [![NPM version](https://badge.fury.io/js/borschik.png)](http://badge.fury.io/js/borschik)
 [![Dependency Status](https://david-dm.org/bem/borschik.png)](https://david-dm.org/bem/borschik)
 
+
+#English
 Borschik is an extendable builder for text-based file formats.
 It's main purpose is the assembly of static files for web projects (CSS, JS, etc.).
 
-You can get more info in [article at bem.info](http://bem.info/articles/borschik)
+[Documentation](./docs/index/index.en.md)
 
-Also docs are [available in russian](README.ru.md).
+[Article at bem.info](http://bit.ly/en-borschik)
+
+#Русский
+Borschik — это расширяемый сборщик файлов текстовых форматов.
+Его основной задачей является сборка статических файлов веб-проектов (CSS, JS
+и т.д.).
+
+[Документация](./docs/index/index.ru.md)
+
+[Статья про Borschik на bem.info](http://bit.ly/ru-borschik)
 
 <!-- Yandex.Metrika counter -->
 <img src="https://mc.yandex.ru/watch/12831025" style="position:absolute; left:-9999px;" alt="" />

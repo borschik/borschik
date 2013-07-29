@@ -3,15 +3,12 @@ a {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="a/a1.png");
     background-image: url("a/a1.png");
 }
-
 b {
     background: url("a/a2.png");
 }
-
 b {
     background: url("a/a2.png");
 }
-
 c1 {
     background: url("//yandex.st");
 }
@@ -23,4 +20,3 @@ c2 {
 c3 {
     background: url(http://yandex.st);
 }
-

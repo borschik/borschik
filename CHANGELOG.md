@@ -1,3 +1,10 @@
+## 0.3.4 (July 29, 2013)
+[Milestone 0.3.4](https://github.com/bem/borschik/issues?milestone=3&state=closed)
+
+- [Fix follow_symlinks behaviour](https://github.com/bem/borschik/issues/7)
+- [CSS tech now removes duplicates @import](https://github.com/bem/borschik/issues/4)
+- Update documentation for English and Russian
+
 ## 0.3.3 (July 18, 2013)
 Update dependencies versions
 

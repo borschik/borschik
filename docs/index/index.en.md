@@ -1,18 +1,18 @@
 # Borschik
 
 Borschik is an extendable builder for text-based file formats.
-It's main purpose is the assembly of static files for web projects (CSS, JS, etc.).
+Its main purpose is assembly of static files for web projects (CSS, JS, etc.).
 
-You can get more info in [article at bem.info](http://bem.info/articles/borschik)
+You can get more info from the [article at bem.info](http://bem.info/articles/borschik)
 
-## Install
+## Installation
 
 Prerequisites:
 
 * nodejs >= 0.6.x&nbsp;— [http://nodejs.org](http://nodejs.org)
 * npm&nbsp;— [http://github.com/isaacs/npm/](http://github.com/isaacs/npm/)
 
-From NPM for use as a command line app:
+From NPM, for use as a command line app:
 
     npm install borschik -g
 
@@ -32,7 +32,7 @@ The available options are:
 
     -v, --version                       Current version
 
-    -t TECH, --tech=TECH                Path to technology (default: file extenstion)
+    -t TECH, --tech=TECH                Path to technology (default: file extension)
                                                                           [string]
     -i INPUT, --input=INPUT             Input file (required)
                                                                           [string]
@@ -45,7 +45,7 @@ The available options are:
     -c COMMENTS, --comments=COMMENTS    Wrap included files with comments (default: true)
                                                                           [boolean]
 
-## Technologies support
+## Technologies supported
 
 | Tables         | CSS  | HTML   | JS        | JSON   |
 | -------------  | ---- | ----   | ---       | ----   |
@@ -57,7 +57,7 @@ The available options are:
 ## .borschik config description
 ```
 {
-  // path-mapping for url changing
+  // path-mapping for changing urls
   // prefix may be relative or absoulte url
   "paths" : {
      "<original-path>": "<prefix-for-new-path>"
@@ -67,7 +67,7 @@ The available options are:
   },
   // path-mapping for freeze
   "freeze_paths": {
-     "<original-path-to-files>": "<path-for-freezed-files>"
+     "<original-path-to-files>": "<path-for-frozen-files>"
   }
 }
 ```

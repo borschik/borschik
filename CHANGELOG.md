@@ -1,3 +1,6 @@
+## 0.3.5 (July 30, 2013)
+- Fix regression after https://github.com/bem/borschik/issues/7
+
 ## 0.3.4 (July 29, 2013)
 [Milestone 0.3.4](https://github.com/bem/borschik/issues?milestone=3&state=closed)
 

@@ -61,6 +61,12 @@ describe('follow_symlinks', function() {
             'name': 'follow symlink for included file (JS)',
             'in': 'test/follow_symlinks/dir/real.js',
             'out': 'var a=1;'
+        },
+
+        {
+            'name': 'follow symlink in the same dir with real path (JS)',
+            'in': 'test/follow_symlinks/dir/include-from-symlink.js',
+            'out': 'var ruJS=!0,stop=!0;'
         }
     ];
 

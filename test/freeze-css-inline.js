@@ -7,6 +7,7 @@ describe('freeze-css-inline:', function() {
     var BORSCHIK = require('..');
 
     const basePath = PATH.resolve(__dirname, 'freeze-css-inline');
+    const configPath = PATH.resolve(__dirname, 'freeze-css-inline', '.borschik');
 
     afterEach(function(cb) {
         require('child_process').exec('rm -rf ' + basePath + '/*-out.*', function() {
@@ -20,41 +21,106 @@ describe('freeze-css-inline:', function() {
         {name: 'should inline svg image', file: 'svg.css'}
     ];
 
-    TESTS.forEach(function(test) {
+    describe('base64: ', function() {
 
-        var input = PATH.resolve(basePath, test.file);
-        var ext = PATH.extname(input);
-        var output = PATH.resolve(basePath, test.file.replace(ext, '-out' + ext));
-        var expect = PATH.resolve(basePath, test.file.replace(ext, '-expect' + ext));
-
-        it(test.name, function(cb) {
-
-            // proccess it
-            BORSCHIK
-                .api({
-                    'comments': false,
-                    'freeze': true,
-                    'input': input,
-                    'minimize': false,
-                    'output': output,
-                    'tech': 'css'
-                })
-                .then(function() {
-                    try {
-                        ASSERT.equal(
-                            FS.readFileSync(output, 'utf-8'),
-                            FS.readFileSync(expect, 'utf-8')
-                        );
-                        cb();
-                    } catch(e) {
-                        cb(e.toString());
-                    }
-                })
-                .fail(function(e) {
-                    cb(e.toString());
-                });
+        beforeEach(function() {
+            var config = FS.readFileSync(PATH.resolve(__dirname, 'freeze-css-inline', 'borschik-base64.json'));
+            FS.writeFileSync(configPath, config);
         });
 
+        afterEach(function() {
+            try {
+                FS.unlinkSync(configPath);
+            } catch(e) {}
+        });
+
+        TESTS.forEach(function(test) {
+
+            var input = PATH.resolve(basePath, test.file);
+            var ext = PATH.extname(input);
+            var output = PATH.resolve(basePath, test.file.replace(ext, '-out' + ext));
+            var expect = PATH.resolve(basePath, test.file.replace(ext, '-expect-base64' + ext));
+
+            it(test.name, function(cb) {
+
+                // proccess it
+                BORSCHIK
+                    .api({
+                        'comments': false,
+                        'freeze': true,
+                        'input': input,
+                        'minimize': false,
+                        'output': output,
+                        'tech': 'css'
+                    })
+                    .then(function() {
+                        try {
+                            ASSERT.equal(
+                                FS.readFileSync(output, 'utf-8'),
+                                FS.readFileSync(expect, 'utf-8')
+                            );
+                            cb();
+                        } catch(e) {
+                            cb(e.toString());
+                        }
+                    })
+                    .fail(function(e) {
+                        cb(e.toString());
+                    });
+            });
+
+        });
+    });
+
+    describe('encodeURIComponent: ', function() {
+
+        beforeEach(function() {
+            var config = FS.readFileSync(PATH.resolve(__dirname, 'freeze-css-inline', 'borschik-encodeURIComponent.json'));
+            FS.writeFileSync(configPath, config);
+        });
+
+        afterEach(function() {
+            try {
+                FS.unlinkSync(configPath);
+            } catch(e) {}
+        });
+
+        TESTS.forEach(function(test) {
+
+            var input = PATH.resolve(basePath, test.file);
+            var ext = PATH.extname(input);
+            var output = PATH.resolve(basePath, test.file.replace(ext, '-out' + ext));
+            var expect = PATH.resolve(basePath, test.file.replace(ext, '-expect-encodeURIComponent' + ext));
+
+            it(test.name, function(cb) {
+
+                // proccess it
+                BORSCHIK
+                    .api({
+                        'comments': false,
+                        'freeze': true,
+                        'input': input,
+                        'minimize': false,
+                        'output': output,
+                        'tech': 'css'
+                    })
+                    .then(function() {
+                        try {
+                            ASSERT.equal(
+                                FS.readFileSync(output, 'utf-8'),
+                                FS.readFileSync(expect, 'utf-8')
+                            );
+                            cb();
+                        } catch(e) {
+                            cb(e.toString());
+                        }
+                    })
+                    .fail(function(e) {
+                        cb(e.toString());
+                    });
+            });
+
+        });
     });
 
 });

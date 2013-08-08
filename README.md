@@ -10,7 +10,10 @@ It's main purpose is the assembly of static files for web projects (CSS, JS, etc
 
 [Documentation](./docs/index/index.en.md)
 
+[JS include notations](./docs/js-include/js-include.en.md)
+
 [Article at bem.info](http://bit.ly/en-borschik)
+
 
 #Русский
 Borschik — это расширяемый сборщик файлов текстовых форматов.

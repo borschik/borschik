@@ -6,7 +6,7 @@ But there is no standard method for this in Javascript so Borschik uses the foll
 This expression must be in:
 * block comment `/*borschik:include:file.js*/`
 * curly brackets like object `{/*borschik:include:file.js*/}`
-* square brackets like array `{/*borschik:include:file.js*/}`
+* square brackets like array `[/*borschik:include:file.js*/]`
 * string `"borschik:include:file.js"`.
 
 
@@ -49,6 +49,8 @@ var myData = [/* borschik:include:file.json */];
 ```
 
 In these examples **block comment and brackets** will be replace with file content.
+
+There is no differents beetween `{}` and `[]` notations. This options is for better code style only.
 
 ## "borschik:include:path/file.js"
 If `include` is in a string it will be replaced with the result of applying `JSON.stringify` to the file's content.

@@ -12,6 +12,8 @@ It's main purpose is the assembly of static files for web projects (CSS, JS, etc
 
 [Article at bem.info](http://bit.ly/en-borschik)
 
+[Freeze and resource inlining](./docs/freeze/freeze.en.md)
+
 #Русский
 Borschik — это расширяемый сборщик файлов текстовых форматов.
 Его основной задачей является сборка статических файлов веб-проектов (CSS, JS

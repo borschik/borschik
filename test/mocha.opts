@@ -1,2 +1,2 @@
 --reporter spec
---require test/setup
+--require test/setup test/all.js

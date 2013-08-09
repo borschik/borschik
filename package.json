@@ -4,9 +4,6 @@
   "version": "0.3.5",
   "homepage": "http://github.com/bem/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
-  "maintainers": [
-    "Sergey Belov <peimei@ya.ru> (http://github.com/arikon)"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/borschik.git"

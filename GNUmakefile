@@ -1,23 +1,16 @@
 BIN = ./node_modules/.bin
 
-.PHONY: test
-
 test:
 	$(BIN)/mocha
 
-lib-cov: clean-coverage
+coverage: clean
 	$(BIN)/istanbul instrument --output lib-cov --no-compact --variable global.__coverage__ lib
-
-.PHONY: coverage
-coverage: lib-cov
-	BORSCHIK_COVER=1 $(BIN)/mocha --reporter mocha-istanbul
+	-BORSCHIK_COVER=1 $(BIN)/mocha --reporter mocha-istanbul
 	@echo
 	@echo Open html-report/index.html file in your browser
 
-.PHONY: clean
-	clean: clean-coverage
-
-.PHONY: clean-coverage
-clean-coverage:
+clean:
 	-rm -rf lib-cov
 	-rm -rf html-report
+
+.PHONY: test coverage clean

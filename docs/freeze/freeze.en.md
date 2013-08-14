@@ -68,7 +68,7 @@ Result
     background: url("data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 .svg {
-    background: url("data:image/svg+xml;%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org.......");
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org.......");
 }
 ```
 

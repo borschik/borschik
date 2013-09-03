@@ -51,6 +51,21 @@ describe('freeze-html', function() {
             'name': 'ie9.css',
             'in': '<!--[if gt IE 9]><!--><link rel="stylesheet" href="1.css"/><!--<![endif]-->',
             'out': '<!--[if gt IE 9]><!--><link rel="stylesheet" href="//yandex.st/prj/_/gKaG181G8PenscQiAxl262QG4h0.css"/><!--<![endif]-->'
+        },
+        {
+            'name': 'omit external urls without schema',
+            'in': '<img src="//yandex.st/foo.png">',
+            'out': '<img src="//yandex.st/foo.png">'
+        },
+        {
+            'name': 'omit external http urls',
+            'in': '<img src="http://yandex.ru/foo.png">',
+            'out': '<img src="http://yandex.ru/foo.png">'
+        },
+        {
+            'name': 'omit external https urls',
+            'in': '<img src="https://yandex.ru/foo.png">',
+            'out': '<img src="https://yandex.ru/foo.png">'
         }
     ];
 

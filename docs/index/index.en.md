@@ -1,6 +1,6 @@
-# Borschik
+# borschik
 
-Borschik is an extendable builder for text-based file formats.
+borschik is an extendable builder for text-based file formats.
 Its main purpose is assembly of static files for web projects (CSS, JS, etc.).
 
 You can get more info from the [article at bem.info](http://bem.info/articles/borschik)

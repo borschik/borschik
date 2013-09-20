@@ -29,21 +29,6 @@ describe('techs/js-link', function() {
             'out': 'var a = "//yandex.st/prj/_/jUK5O9GsS2gPWOhRMeBxR0GThf0.png";'
         },
         {
-            'name': 'img in inline comment',
-            'in': '//var a = borschik.link("1.png");',
-            'out': '//var a = borschik.link("1.png");'
-        },
-        {
-            'name': 'img in block comment',
-            'in': '/*var a = borschik.link("1" + ".png");*/',
-            'out': '/*var a = borschik.link("1" + ".png");*/'
-        },
-        {
-            'name': 'img in block comment with line breaks',
-            'in': '/*\nvar e = borschik.link("1" + ".png");\n*/',
-            'out': '/*\nvar e = borschik.link("1" + ".png");\n*/'
-        },
-        {
             'name': 'dynamic link 1',
             'in': 'var f = borschik.link("1" + ".png");',
             'out': 'var f = borschik.link("1" + ".png");'

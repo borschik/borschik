@@ -41,6 +41,21 @@ describe('freeze-html', function() {
             'name': 'several line comment',
             'in': '<!--\n<script src="1.js"></script>\n-->',
             'out': '<!--\n<script src="1.js"></script>\n-->'
+        },
+        {
+            'name': 'link@href absolute path',
+            'in': '<link rel="shortcut icon" href="/favicon.ico"/>',
+            'out': '<link rel="shortcut icon" href="/favicon.ico"/>'
+        },
+        {
+            'name': 'script@src absolute path //',
+            'in': '<script src="//yandex.st/1.js"></script>',
+            'out': '<script src="//yandex.st/1.js"></script>'
+        },
+        {
+            'name': 'script@src absolute path http://',
+            'in': '<script src="http://yandex.st/1.js"></script>',
+            'out': '<script src="http://yandex.st/1.js"></script>'
         }
     ];
 

@@ -1,12 +1,14 @@
 ## 0.4.0
 This version is partially incompatible with 0.3.x
 
-- Use [vow](https://github.com/dfilatov/jspromise) instead of [q](https://github.com/kriskowal/q) for promises.
+- Use [vow](https://github.com/dfilatov/jspromise) instead of [q](https://github.com/kriskowal/q) for promises
 - Remove deprecated technologies: `css-fast` and `js-link`
 - `json-links` tech renamed to `json`
-- OmetaJS and CoffeeScript techs moved from main repo to plugins (links here)
+- [OmetaJS](https://github.com/bem/borschik-tech-css-ometajs) and [CoffeeScript](https://github.com/bem/borschik-tech-js-coffee) techs moved from main repo to plugins
 - [Resource inlining support](https://github.com/bem/borschik/issues/9). See [doc for details](./docs/freeze/freeze.en.md#resource-inlining)
 - [New js-include notations](https://github.com/bem/borschik/issues/16). See [doc for details](./docs/js-include/js-include.en.md)
+- Fix some issues with freeze in html tech ([#30](https://github.com/bem/borschik/issues/30), [#39](https://github.com/bem/borschik/issues/39))
+- Update UglifyJS to 2.4.0
 
 ## 0.3.5 (July 30, 2013)
 - Fix regression after https://github.com/bem/borschik/issues/7

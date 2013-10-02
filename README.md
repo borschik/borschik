@@ -10,6 +10,13 @@ It's main purpose is the assembly of static files for web projects (CSS, JS, etc
 
 [Documentation](./docs/index/index.en.md)
 
+[JS include notations](./docs/js-include/js-include.en.md)
+
+[Freeze and resource inlining](./docs/freeze/freeze.en.md)
+
+[How borschik resolves technologies](./docs/where-is-my-tech/where-is-my-tech.en.md) and
+[How to extend borschik (write your own technology)](./docs/how-to-write-tech/how-to-write-tech.en.md)
+
 [Article at bem.info](http://bit.ly/en-borschik)
 
 #Русский

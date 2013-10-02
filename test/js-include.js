@@ -18,7 +18,11 @@ describe('js-include:', function() {
         {name: 'should joins /* borschik:include: */', file: 'include1.js'},
         {name: 'should joins "borschik:include:"', file: 'include2.js'},
         {name: 'should save block comments in right place', file: 'include3.js'},
-        {name: 'should save inline comments in right place', file: 'include4.js'}
+        {name: 'should save inline comments in right place', file: 'include4.js'},
+        {name: 'should joins {/* borschik:include: */}', file: 'include5.js'},
+        {name: 'should joins [/* borschik:include: */]', file: 'include6.js'},
+        {name: 'should joins borshik:include with expression as "/*" before', file: 'include7.js'},
+        {name: 'should joins borshik:include with expression as "//"" before', file: 'include8.js'}
     ];
 
     TESTS.forEach(function(test) {

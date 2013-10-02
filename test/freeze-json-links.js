@@ -1,6 +1,6 @@
 var ASSERT = require('assert');
 
-describe('techs/json-links', function() {
+describe('techs/json', function() {
 
     var PATH = require('path');
     var FS = require('fs');
@@ -26,7 +26,7 @@ describe('techs/json-links', function() {
     ];
 
     TESTS.forEach(function(test, i) {
-        it('json-links test ' + i, function(cb) {
+        it('json test ' + i, function(cb) {
 
             // write test file
             FS.writeFileSync(fakeFile, test.in, 'utf-8');
@@ -38,7 +38,7 @@ describe('techs/json-links', function() {
                     'input': fakeFile,
                     'minimize': true,
                     'output': fakeResFile,
-                    'tech': 'json-links'
+                    'tech': 'json'
                 })
                 .then(function() {
                     try {

@@ -1,4 +1,4 @@
-## 0.4.0
+## 0.4.0 (October 2, 2013)
 This version is partially incompatible with 0.3.x
 
 - Use [vow](https://github.com/dfilatov/jspromise) instead of [q](https://github.com/kriskowal/q) for promises

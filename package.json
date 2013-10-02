@@ -1,7 +1,7 @@
 {
   "name": "borschik",
   "description": "Extendable builder for text-based file formats",
-  "version": "0.4.0-beta5",
+  "version": "0.4.0",
   "homepage": "http://github.com/bem/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "repository": {
@@ -35,8 +35,5 @@
   "engines": [
     "node >= 0.6.0"
   ],
-  "license": "MIT",
-  "publishConfig": {
-    "tag": "unstable"
-  }
+  "license": "MIT"
 }

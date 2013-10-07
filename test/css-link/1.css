@@ -1,0 +1,7 @@
+.a
+{
+    filter: expression('progid:DXImageTransform.Microsoft.AlphaImageLoader(' +
+            'src=' + style.backgroundImage.replace('url(', '').replace(')', '') +
+            ', sizingMethod="scale")'
+    );
+}

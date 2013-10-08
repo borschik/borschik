@@ -1,9 +1,9 @@
 ## 0.4.0 (October 2, 2013)
 This version is partially incompatible with 0.3.x
 
-- New plugin system. See [doc for details](./docs/where-is-my-tech/where-is-my-tech.en.md)
-- [Resource inlining support](https://github.com/bem/borschik/issues/9). See [doc for details](./docs/freeze/freeze.en.md#resource-inlining)
-- [New js-include notations](https://github.com/bem/borschik/issues/16). See [doc for details](./docs/js-include/js-include.en.md)
+- New plugin system. See [doc for details](https://github.com/bem/borschik/blob/master/docs/where-is-my-tech/where-is-my-tech.en.md)
+- [Resource inlining support](https://github.com/bem/borschik/issues/9). See [doc for details](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#resource-inlining)
+- [New js-include notations](https://github.com/bem/borschik/issues/16). See [doc for details](https://github.com/bem/borschik/blob/master/docs/js-include/js-include.en.md)
 - Use [vow](https://github.com/dfilatov/jspromise) instead of [q](https://github.com/kriskowal/q) for promises
 - Remove deprecated technologies: `css-fast` and `js-link`
 - `json-links` tech renamed to `json`

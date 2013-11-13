@@ -20,14 +20,16 @@
     "vow": "0.3.10",
     "vow-fs": "0.2.3",
     "csso": "1.3.8",
-    "uglify-js": "2.4.3",
-    "webp": "*"
+    "uglify-js": "2.4.3"
   },
   "devDependencies": {
     "istanbul": "~0.1.42",
     "mocha-as-promised": "*",
     "mocha-istanbul": "*",
     "mocha": "~1.12.0"
+  },
+  "optionalDependencies": {
+    "webp": "*"
   },
   "scripts": {
     "test": "make test",

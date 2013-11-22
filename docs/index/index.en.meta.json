@@ -1,0 +1,13 @@
+{
+    "title": "borschik",
+    "createDate": "29-06-2013",
+    "editDate": "15-08-2013",
+    "summary": "A short guide to borschik.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "categories": [{"name": "optimizers/borschik", "url": "optimizers/borschik", "order": "20/10"}],
+    "translators": [],
+    "url": "/docs/index/",
+    "type": "tools"
+}

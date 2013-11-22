@@ -1,0 +1,12 @@
+{
+    "title": "Static resources \"freeze\"",
+    "createDate": "09-09-2013",
+    "editDate": "14-09-2013",
+    "summary": "borschik technique for static resource loading.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "categories": [{"name": "optimizers/borschik", "url": "optimizers/borschik", "order": "20/10"}],
+    "translators": [],
+    "type": "tools"
+}

@@ -1,0 +1,12 @@
+{
+    "title": "Where Is My Tech",
+    "createDate": "02-10-2013",
+    "editDate": "",
+    "summary": "How borschik resolves technologies.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "categories": [{"name": "optimizers/borschik", "url": "optimizers/borschik", "order": "20/10"}],
+    "translators": [],
+    "type": "tools"
+}

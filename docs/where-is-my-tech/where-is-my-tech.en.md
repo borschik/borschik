@@ -1,6 +1,6 @@
-# How borschik resolves technologies
+# How borschik Resolves Technologies
 
-Borschik resolves technology's path in following order
+borschik resolves technology's path in following order
 
 1. If path starts with `/` or `.`, borschik uses given path. Example: `borschik -t ./my-tech/tech.js -i my-file.ext`
 2. Try to load tech from `borschik/lib/techs/<given technology>`. Example: `borschik -t css -i my-file.css`

@@ -50,7 +50,11 @@ There is special syntax (`:encodeURIComponent:` and `:base64:`) for resource inl
 }
 ```
 
-With this config all links to resources in `i/svg_images` or `i/gif_images` will be inlined. Borschik supports `base64` and `encodeURIComponent` encoding only.
+With this config all links to resources in `i/svg_images` or `i/gif_images` will be inlined.
+
+Borschik supports `base64` and `encodeURIComponent` encoding only.
+
+Borschik supports following file formats: gif, png, svg, woff.
 
 Example
 ```css

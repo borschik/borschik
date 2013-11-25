@@ -7,9 +7,9 @@ describe('WebP convert', function() {
 
     var path;
 
-    before(function(done){
+    before(function(){
         FREEZE.convertToWebp(FREEZE.realpathSync('test/freeze_webp/test.png'), 
-            FREEZE.realpathSync('test/freeze_webp/test.webp'), done);
+            FREEZE.realpathSync('test/freeze_webp/test.webp'));
     });
 
     it('WebP convert ok', function() {

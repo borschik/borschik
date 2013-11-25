@@ -1,3 +1,8 @@
+## 0.4.1 (November 25, 2013)
+
+- borschik can inline .ttf files now.
+- [Write bad result to output when minimize is failed](https://github.com/bem/borschik/issues/28)
+
 ## 0.4.0 (October 2, 2013)
 This version is partially incompatible with 0.3.x
 

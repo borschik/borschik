@@ -74,4 +74,4 @@ borschik [OPTIONS]
 
 
 ## Лицензия
-[MIT](/MIT-LICENSE.txt)
+[MIT](https://github.com/bem/borschik/blob/master/MIT-LICENSE.txt)

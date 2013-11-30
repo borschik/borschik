@@ -1,3 +1,8 @@
+## 0.4.2 (November 30, 2013)
+
+- borschik can inline .jpg files now.
+- Update dependencies: csso@1.3.10, uglify-js@2.4.6, vow@0.3.12
+
 ## 0.4.1 (November 25, 2013)
 
 - borschik can inline .ttf files now.

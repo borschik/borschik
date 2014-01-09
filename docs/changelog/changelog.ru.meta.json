@@ -1,9 +1,9 @@
 {
-    "title": "Changelog",
-    "longTitle": "borschik changelog",
+    "title": "История изменений",
+    "longTitle": "borschik: история изменений",
     "createDate": "06-07-2013",
     "editDate": "08-10-2013",
-    "summary": "borschik changelog.",
+    "summary": "borschik: история изменений.",
     "thumbnail": "",
     "authors": ["androsov-alexey", "belov-sergey"],
     "tags": ["tools", "borschik"],

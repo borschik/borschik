@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Static resources \"freeze\"",
+    "createDate": "09-09-2013",
+    "editDate": "14-09-2013",
+    "summary": "borschik technique for static resource loading.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 # Static resources "freeze"
 
 What means "freeze", description and advantages of this technology you can get in [article at bem.info](http://bem.info/articles/borschik).

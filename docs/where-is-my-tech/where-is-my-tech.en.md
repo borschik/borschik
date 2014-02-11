@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "Where Is My Tech",
+    "createDate": "02-10-2013",
+    "editDate": "",
+    "summary": "How borschik resolves technologies.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 # How borschik Resolves Technologies
 
 borschik resolves technology's path in following order

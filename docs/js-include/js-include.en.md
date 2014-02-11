@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "JS Include Notations",
+    "createDate": "08-09-2013",
+    "editDate": "",
+    "summary": "borschik can merge JS files. But there is no standard method for this in Javascript so borschik uses the syntax described in this article.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 # JS include notations
 
 borschik can merge JS files.

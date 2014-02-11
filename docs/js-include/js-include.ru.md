@@ -1,3 +1,4 @@
+<!--
 {
     "title": "Нотация для JS include",
     "createDate": "08-09-2013",
@@ -6,7 +7,11 @@
     "thumbnail": "",
     "authors": ["androsov-alexey"],
     "tags": ["tools", "borschik"],
-    "categories": [{"name": "Оптимизаторы/borschik", "url": "optimizers/borschik", "order": "20/10"}],
     "translators": [],
     "type": "tools"
 }
+#META_LABEL-->
+
+# Нотация для JS include
+
+Данная статья недоступна на русском языке

@@ -1,3 +1,17 @@
+<!--
+{
+    "title": "borschik",
+    "createDate": "29-06-2013",
+    "editDate": "15-08-2013",
+    "summary": "A short guide to borschik.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey"],
+    "tags": ["tools", "borschik"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 # borschik
 
 borschik is an extendable builder for text-based file formats.

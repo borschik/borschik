@@ -1,3 +1,4 @@
+<!--
 {
     "title": "borschik и технологии",
     "longTitle": "Как borschik собирает технологии",
@@ -7,7 +8,11 @@
     "thumbnail": "",
     "authors": ["androsov-alexey"],
     "tags": ["tools", "borschik"],
-    "categories": [{"name": "Оптимизаторы/borschik", "url": "optimizers/borschik", "order": "20/10"}],
     "translators": [],
     "type": "tools"
 }
+#META_LABEL-->
+
+# Borschik и технологии
+
+Данная статья недоступна на русском языке

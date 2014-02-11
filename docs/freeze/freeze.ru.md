@@ -1,3 +1,4 @@
+<!--
 {
     "title": "\"Заморозка\" статических ресурсов(freeze)",
     "longTitle": "\"Заморозка\" статических ресурсов(freeze) предлагаемая borschik",
@@ -7,7 +8,11 @@
     "thumbnail": "",
     "authors": ["androsov-alexey"],
     "tags": ["tools", "borschik"],
-    "categories": [{"name": "Оптимизаторы/borschik", "url": "optimizers/borschik", "order": "20/10"}],
     "translators": [],
     "type": "tools"
 }
+#META_LABEL-->
+
+# "Заморозка" статических ресурсов(freeze)
+
+Данная статья недоступна на русском языке

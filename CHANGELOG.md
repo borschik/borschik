@@ -1,3 +1,18 @@
+<!--
+{
+    "title": "Changelog",
+    "longTitle": "borschik Changelog",
+    "createDate": "06-07-2013",
+    "editDate": "08-10-2013",
+    "summary": "borschik changelog.",
+    "thumbnail": "",
+    "authors": ["androsov-alexey", "belov-sergey"],
+    "tags": ["tools", "borschik"],
+    "translators": [],
+    "type": "tools"
+}
+#META_LABEL-->
+
 ## 0.4.2 (November 30, 2013)
 
 - borschik can inline .jpg files now.

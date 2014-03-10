@@ -67,7 +67,7 @@ The available options are:
   },
   // path-mapping for freeze
   "freeze_paths": {
-     "<original-path-to-files>": "<path-for-frozen-files>"
+     "<wildcard-to-files>": "<path-for-frozen-files>"
   }
 }
 ```

@@ -10,8 +10,8 @@ File `.borschik` relates to its own directory and all subdirectories.
 ```js
 {
     "freeze_paths": {
-        "i/bg": "../../_", // result path is "_"
-        "i/ico": "../_" // result path is "i/_"
+        "i/bg/**": "freeze/bg",
+        "i/ico/**": "freeze/ico"
     }
 }
 ```
@@ -19,20 +19,20 @@ File `.borschik` relates to its own directory and all subdirectories.
 `freeze_paths` — this key defines which files will be frozen, and where any transformations in the file path of the frozen result.
 
 For example, when Borschik processes CSS file and finds links to images in `/i/bg`,
-borschik freezes these links, changing their path to `/_` (because `/i/bg/../../_` is '/_' ) and creates image copy in this path.
+borschik freezes these links, changing their path to `freeze/bg` and creates image copy in this path.
 
-Object key — directories whose files will be frozen.
-Key value - directory for resulting frozen files, relative to their initial path.
+Object key — wildcards whose files will be frozen. Wildcards are matched with [minimatch](https://github.com/isaacs/minimatch).
+Key value - directory for resulting frozen files, relative to the config path.
 
 Other example
 ```js
 {
     "freeze_paths": {
-        "i/bg": "_" // result path is 'i/bg/_'
+        "i/bg/**": "i/_"
     }
 }
 ```
-Borschik freezes files from directory `i/bg` to `i/bg/_`
+Borschik freezes matched files from directory `i/bg` to `i/_`
 
 **Important note:**
 * Borschik does not freeze all files in directories but only those linked by processed files.
@@ -44,8 +44,8 @@ There is special syntax (`:encodeURIComponent:` and `:base64:`) for resource inl
 ```json
 {
     "freeze_paths": {
-        "i/svg_images": ":encodeURIComponent:",
-        "i/gif_images": ":base64:"
+        "i/svg_images/**": ":encodeURIComponent:",
+        "i/gif_images/**": ":base64:"
     }
 }
 ```

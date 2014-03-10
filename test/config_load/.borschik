@@ -4,6 +4,7 @@
     },
 
     "freeze_paths" : {
-        "./": "test/test2/"
+        "./*.jpg": "test/test-jpg/",
+        "./**": "test/test2/"
     }
 }

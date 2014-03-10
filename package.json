@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "istanbul": "~0.1.42",
-    "mocha-as-promised": "*",
+    "mocha-as-promised": "2.x",
     "mocha-istanbul": "*",
-    "mocha": "~1.12.0"
+    "mocha": "1.17.x"
   },
   "scripts": {
     "test": "make test",

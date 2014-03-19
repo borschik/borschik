@@ -28,6 +28,10 @@
     "mocha-istanbul": "*",
     "mocha": "1.17.x"
   },
+  "optionalDependencies": {
+    "webp": "*",
+    "execSync": "*"
+  },
   "scripts": {
     "test": "make test",
     "coverage": "make coverage"

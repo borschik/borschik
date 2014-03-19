@@ -109,13 +109,13 @@ describe('isFreezableUrl', function() {
 
 });
 
-function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {
+function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize, webp) {
     inPath = PATH.resolve(PATH.join(__dirname, dir, inPath));
     outPath = PATH.resolve(PATH.join(__dirname, dir, outPath));
     okPath = PATH.resolve(PATH.join(__dirname, dir, okPath));
 
     before(function() {
-        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, freeze: freeze, minimize: minimize });
+        return BORSCHIK.api({ tech: tech, input: inPath, output: outPath, freeze: freeze, minimize: minimize, webp: webp });
     });
 
     it('freeze ' + tech + ' ok', function() {
@@ -124,7 +124,12 @@ function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {
 
     after(function() {
         FS.unlinkSync(outPath);
-        var rmPath = PATH.resolve(__dirname, dir, 'test/test2/wFPs-e1B3wMRud8TzGw7YHjS08I.png');
+        if (!webp){
+            var rmPath = PATH.resolve(__dirname, dir, 'test/test2/wFPs-e1B3wMRud8TzGw7YHjS08I.png');
+        }
+        else {
+            var rmPath = PATH.resolve(__dirname, dir, 'test/test2/qpycPIWZtbn5bup4LjfkHuu-n-M.webp');
+        }
         if (FS.existsSync(rmPath)) FS.unlinkSync(rmPath);
         if (FS.existsSync(rmPath = FREEZE.realpathSync(PATH.join('test', dir, 'test/test2')))) {
             FS.rmdirSync(rmPath);
@@ -134,12 +139,16 @@ function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {
 }
 
 describe('freeze from .css (-t css)', function() {
-    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
+    testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false, false);
 });
 
 describe('freeze excepts from .css (-t css)', function() {
-    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false);
+    testFreeze('css', 'freeze_excepts', 'test.css', '_test.css', 'ok_css.css', true, false, false);
 });
+
+describe('freeze with WebP convertion', function(){
+    testFreeze('css', 'freeze_webp', 'test.css', '_test.css', 'ok_css.css', true, false, true);
+})
 
 describe('followSymlinks', function() {
     var linkPath = PATH.join(__dirname, 'freeze_follow_symlinks/link.png'),

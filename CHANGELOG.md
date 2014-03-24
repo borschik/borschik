@@ -1,4 +1,4 @@
-## 1.0.0 (March 24, 2014)
+## 1.0.0
 
 - [SemVer](http://semver.org/) support
 - [Add wildcard support for freeze_path](https://github.com/bem/borschik/issues/23). This feature break compatibility:
@@ -8,17 +8,17 @@
 - Add support for [custom tech options](https://github.com/bem/borschik/pull/56).
 - New `borschik.include()` [syntax for JS tech](https://github.com/bem/borschik/pull/48).
 
-## 0.4.2 (November 30, 2013)
+## 0.4.2
 
 - borschik can inline .jpg files now.
 - Update dependencies: csso@1.3.10, uglify-js@2.4.6, vow@0.3.12
 
-## 0.4.1 (November 25, 2013)
+## 0.4.1
 
 - borschik can inline .ttf files now.
 - [Write bad result to output when minimize is failed](https://github.com/bem/borschik/issues/28)
 
-## 0.4.0 (October 2, 2013)
+## 0.4.0
 This version is partially incompatible with 0.3.x
 
 - New plugin system. See [doc for details](https://github.com/bem/borschik/blob/master/docs/where-is-my-tech/where-is-my-tech.en.md)
@@ -31,17 +31,17 @@ This version is partially incompatible with 0.3.x
 - Fix some issues with freeze in html tech ([#30](https://github.com/bem/borschik/issues/30), [#39](https://github.com/bem/borschik/issues/39))
 - Update UglifyJS to 2.4.0
 
-## 0.3.5 (July 30, 2013)
+## 0.3.5
 - Fix regression after https://github.com/bem/borschik/issues/7
 
-## 0.3.4 (July 29, 2013)
+## 0.3.4
 [Milestone 0.3.4](https://github.com/bem/borschik/issues?milestone=3&state=closed)
 
 - [Fix follow_symlinks behaviour](https://github.com/bem/borschik/issues/7)
 - [CSS tech now removes duplicates @import](https://github.com/bem/borschik/issues/4)
 - Update documentation for English and Russian
 
-## 0.3.3 (July 18, 2013)
+## 0.3.3
 Update dependencies versions
 
 - coa ~0.4.0
@@ -52,7 +52,7 @@ Update dependencies versions
 - istanbul ~0.1.42
 - mocha ~1.12.0
 
-## 0.3.2 (July 06, 2013)
+## 0.3.2
 - UglifyJS updated to ~2.3
 - CSSO updated to 1.3.7
 - Fix problem with freeze and mkdir (https://github.com/veged/borschik/issues/90)

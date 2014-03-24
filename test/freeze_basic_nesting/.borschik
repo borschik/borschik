@@ -4,7 +4,7 @@
     },
 
     "freeze_paths" : {
-        "./": "test/test2/"
+        "./**": "test/test2/"
     },
 
     "freeze_nesting_level": 2

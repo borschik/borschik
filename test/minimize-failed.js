@@ -2,7 +2,7 @@ describe('Useful info in case of failed minimize:', function() {
 
     var ASSERT = require('assert');
     var BORSCHIK = require('..');
-    var FS = require('../lib/fs');
+    var FS = require('fs');
     var PATH = require('path');
 
 

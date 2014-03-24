@@ -1,6 +1,6 @@
 var BORSCHIK = require('..'),
     FREEZE = require('..').freeze,
-    FS = BORSCHIK.require('./fs'),
+    FS = require('fs'),
     PATH = require('path'),
     ASSERT = require('assert'),
 

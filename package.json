@@ -15,6 +15,7 @@
     "borschik": "./bin/borschik"
   },
   "dependencies": {
+    "minimatch": "0.2.14",
     "coa": "0.4.0",
     "inherit": "2.1.0",
     "vow": "0.3.12",

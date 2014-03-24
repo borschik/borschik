@@ -49,13 +49,11 @@ describe('loadConfig', function() {
         ASSERT.equal(FREEZE.path(PATH.resolve(__dirname, 'config_load')), '//test/test/');
     });
 
-    it('freezePath', function() {
-        ASSERT.ok(FREEZE.freezePath(PATH.resolve(__dirname, 'config_load')));
-    });
-
     it('freezeDir', function() {
-        ASSERT.equal(FREEZE.freezeDir(PATH.resolve(__dirname, 'config_load/file.png')),
-                     FREEZE.freezePath(PATH.resolve(__dirname, 'config_load')));
+        ASSERT.equal(
+            FREEZE.freezeDir(PATH.resolve(__dirname, 'config_load/file.png')),
+            PATH.resolve(__dirname, 'config_load/test/test2')
+        );
     });
 
 });
@@ -64,10 +62,6 @@ describe('loadConfig empty', function() {
 
     it('path', function() {
         ASSERT.equal(FREEZE.path(PATH.resolve(__dirname, 'empty_config')), undefined);
-    });
-
-    it('freezePath', function() {
-        ASSERT.equal(FREEZE.freezePath(PATH.resolve(__dirname, 'empty_config')), undefined);
     });
 
     it('freezeDir', function() {

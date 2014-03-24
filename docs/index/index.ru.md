@@ -67,7 +67,7 @@ borschik [OPTIONS]
   },
   // path-mapping для заморозки
   "freeze_paths": {
-     "<original-path-to-files>": "<path-for-freezed-files>"
+     "<wildcard-to-files>": "<path-for-freezed-files>"
   }
 }
 ```

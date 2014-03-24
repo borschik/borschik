@@ -1,0 +1,11 @@
+{
+    "paths" : {
+        "./": "//a/b/"
+    },
+
+    "freeze_paths" : {
+        "./": "test/test2/"
+    },
+
+    "freeze_nesting_level": 2
+}

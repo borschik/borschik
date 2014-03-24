@@ -77,3 +77,56 @@ Result
 ```
 
 Inlining in JS-files with `borschik.link()` is also supported.
+
+## nesting level
+```json
+{
+    "freeze_paths": {
+        "i/bg/**": "freeze",
+        "i/ico/**": "freeze"
+    },
+
+    "freeze_nesting_level": 2
+}
+```
+
+Nesting level is used to improve server performance for projects with a lot of freezed files.
+
+Servers have the problem to read directory listing with more then 1000 files and developers ussualy split such dirs.
+
+Some examples:
+
+Dir listing for `"freeze_nesting_level": 1` (default)
+```
+2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.png
+La6qi18Z8LwgnZdsAr1qy1GwCwo.gif
+X31pO5JJJKEifJ7sfvuf3mGeD_8.png
+XNya0AroXD40MFsUD5H4-a4glA8.gif
+```
+
+Dir listing for `"freeze_nesting_level": 2`
+```
+2/
+  bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.png
+L/
+  a6qi18Z8LwgnZdsAr1qy1GwCwo.gif
+X/
+  31pO5JJJKEifJ7sfvuf3mGeD_8.png
+  Nya0AroXD40MFsUD5H4-a4glA8.gif
+```
+
+Dir listing for `"freeze_nesting_level": 3`
+```
+2/
+  b/
+    nxrFb8Ym4k7qx4vRv8Xs_l5Dg.png
+L/
+  a/
+    6qi18Z8LwgnZdsAr1qy1GwCwo.gif
+X/
+  3/
+    1pO5JJJKEifJ7sfvuf3mGeD_8.png
+  N/
+    ya0AroXD40MFsUD5H4-a4glA8.gif
+```
+

@@ -72,7 +72,7 @@ The available options are:
      "<wildcard-to-files>": "<path-for-frozen-files>"
   },
   
-  // freeze nesting level (default 1)
+  // freeze nesting level (default 0)
   // read more https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md
   "freeze_nesting_level": <level>
 }

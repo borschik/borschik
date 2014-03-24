@@ -96,7 +96,7 @@ Servers have the problem to read directory listing with more then 1000 files and
 
 Some examples:
 
-Dir listing for `"freeze_nesting_level": 1` (default)
+Dir listing for `"freeze_nesting_level": 0` (default)
 ```
 2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.png
 La6qi18Z8LwgnZdsAr1qy1GwCwo.gif
@@ -104,7 +104,7 @@ X31pO5JJJKEifJ7sfvuf3mGeD_8.png
 XNya0AroXD40MFsUD5H4-a4glA8.gif
 ```
 
-Dir listing for `"freeze_nesting_level": 2`
+Dir listing for `"freeze_nesting_level": 1`
 ```
 2/
   bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.png
@@ -115,7 +115,7 @@ X/
   Nya0AroXD40MFsUD5H4-a4glA8.gif
 ```
 
-Dir listing for `"freeze_nesting_level": 3`
+Dir listing for `"freeze_nesting_level": 2`
 ```
 2/
   b/

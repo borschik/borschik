@@ -34,6 +34,8 @@ The available options are:
 
     -t TECH, --tech=TECH                Path to technology (default: file extension)
                                                                           [string]
+    --tech-options=TECHOPTIONS          Additional options for tech in JSON format
+                                                                          [string]
     -i INPUT, --input=INPUT             Input file (required)
                                                                           [string]
     -o OUTPUT, --output=OUTPUT          Output file (required)
@@ -68,7 +70,11 @@ The available options are:
   // path-mapping for freeze
   "freeze_paths": {
      "<wildcard-to-files>": "<path-for-frozen-files>"
-  }
+  },
+  
+  // freeze nesting level (default 1)
+  // read more https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md
+  "freeze_nesting_level": <level>
 }
 ```
 

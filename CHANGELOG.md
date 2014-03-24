@@ -1,3 +1,13 @@
+## 1.0.0 (March 24, 2014)
+
+- Go to [semver](http://semver.org/)
+- [Add wildcard support for freeze_path](https://github.com/bem/borschik/issues/23). This feature break compatibility:
+  - path to freeze relative to config now (like `paths` or `follow_symlinks`)
+  - path must be valid wildcard (paths like `./i/` must be replaced with `./i/**`)
+- Add support for [freeze nesting path](https://github.com/bem/borschik/pull/55). This options improve server performance for projects with a lot of freeze files.
+- Add support for [custom tech options](https://github.com/bem/borschik/pull/56).
+- New `borschik.include()` [syntax for JS tech](https://github.com/bem/borschik/pull/48).
+
 ## 0.4.2 (November 30, 2013)
 
 - borschik can inline .jpg files now.

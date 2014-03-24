@@ -1,6 +1,6 @@
 ## 1.0.0 (March 24, 2014)
 
-- Go to [semver](http://semver.org/)
+- [SemVer](http://semver.org/) support
 - [Add wildcard support for freeze_path](https://github.com/bem/borschik/issues/23). This feature break compatibility:
   - path to freeze relative to config now (like `paths` or `follow_symlinks`)
   - path must be valid wildcard (paths like `./i/` must be replaced with `./i/**`)

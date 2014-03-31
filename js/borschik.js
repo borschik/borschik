@@ -3,12 +3,18 @@
  */
 
 (function() {
+
     /**
      * Borschik
      * @namespace
      */
-    var borschik = window['borschik'] = {};
+    var borschik = {};
 
+    /**
+     * Storage for dynamic links.
+     * @private
+     * @type {Object}
+     */
     var links = {};
 
     /**
@@ -29,10 +35,17 @@
     borschik.link = function(link) {
         // link with "@" is dynamic
         if (link.charAt(0) === '@') {
-            return links[link.substr(1)];
+            return links[link.substr(1)] || '[borschik] Undefined link "' + link + '"';
         }
 
         return link;
     };
+
+    // exports namespace
+    if (typeof window === 'undefined' && typeof module !== 'undefined') {
+        module.exports = borschik;
+    } else {
+        window['borschik'] = borschik;
+    }
 
 })();

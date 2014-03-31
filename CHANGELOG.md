@@ -1,3 +1,7 @@
+## 1.0.1
+
+-  Add support to use `borschik.link()` with node.js
+
 ## 1.0.0
 
 - [SemVer](http://semver.org/) support

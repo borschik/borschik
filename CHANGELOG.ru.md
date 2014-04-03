@@ -6,15 +6,19 @@
 
 - borschik теперь версионируется по semver.
 - [Добавили поддержку wildcard для freeze_path](https://github.com/bem/borschik/issues/23). Это изменение ломает совместимость со старым поведением:
-  -- путь для фриза теперь относителен конфига .borschik, как и все остальные пути (paths, follow_symlinks)
-  -- вместо пути ./images теперь надо писать ./images/**. Например
+  - путь для фриза теперь относителен конфига `.borschik`, как и все остальные опции (`paths`, `follow_symlinks`)
+  - вместо пути `./images` теперь надо писать `./images/**`. Например
+  ```json
   "freeze_paths": {
         "./static/images/**": "./static/freeze"
   }
+  ```
   т.е. все ресурсы из static/images будут зафрижены в static/freeze. Раньше надо было писать вот так
+  ```json
   "freeze_paths": {
         "./static/images": "../freeze"
   }
+  ```
 
 - Добавили [поддержку для фриза во вложенные папки](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#nesting-level).
 - Добавили [новый параметр](https://github.com/bem/borschik/pull/56) --tech-options "<json>" для передачи любых параметров в технологию.

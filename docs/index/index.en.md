@@ -9,7 +9,7 @@ You can get more info from the [article at bem.info](http://bem.info/articles/bo
 
 Prerequisites:
 
-* nodejs >= 0.6.x&nbsp;— [http://nodejs.org](http://nodejs.org)
+* nodejs >= 0.8.x&nbsp;— [http://nodejs.org](http://nodejs.org)
 * npm&nbsp;— [http://github.com/isaacs/npm/](http://github.com/isaacs/npm/)
 
 From NPM, for use as a command line app:
@@ -54,7 +54,12 @@ The available options are:
 | Include        | X    | -      | X         | -      |
 | Url processing | X    | X      | X         | X      |
 | Url freeze     | X    | X      | X         | X      |
-| Minimize       | CSSO | -      | UglifyJS  | X      |
+| Minimize       | CSSO | -      | UglifyJS*  | X      |
+
+*: JS tech supports `--tech-options` that passed to UglifyJS.
+```
+$ borschik --input=myfile.js --tech-options='{"uglify":{"output":{"max_line_len": 100},"warnings":true}}'
+```
 
 ## .borschik config description
 ```

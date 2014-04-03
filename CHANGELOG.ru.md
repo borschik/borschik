@@ -21,8 +21,8 @@
   ```
 
 - Добавили [поддержку для фриза во вложенные папки](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#nesting-level).
-- Добавили [новый параметр](https://github.com/bem/borschik/pull/56) --tech-options "<json>" для передачи любых параметров в технологию.
-- Для инклюда js-файлов добавили [новый синтаксис](https://github.com/bem/borschik/pull/48) borschik.include('./path/to/file.js').
+- Добавили [новый параметр](https://github.com/bem/borschik/pull/56) `--tech-options "<json>"` для передачи любых параметров в технологию.
+- Для инклюда js-файлов добавили [новый синтаксис](https://github.com/bem/borschik/pull/48) `borschik.include('./path/to/file.js')`.
 
 ## 0.4.2
 

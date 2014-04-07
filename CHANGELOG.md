@@ -1,3 +1,10 @@
+## 1.0.2
+
+-  UglifyJS options support in JS tech.
+```
+$ borschik --input=myfile.js --tech-options='{"uglify":{"output":{"max_line_len": 100},"warnings":true}}'
+```
+
 ## 1.0.1
 
 -  Add support to use `borschik.link()` with node.js

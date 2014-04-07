@@ -1,3 +1,10 @@
+## 1.0.2
+
+-  Поддержка передача параметров для UglifyJS в технологии JS.
+```
+$ borschik --input=myfile.js --tech-options='{"uglify":{"output":{"max_line_len": 100},"warnings":true}}'
+```
+
 ## 1.0.1
 
 -  Поддержка `borschik.link()` в node.js.

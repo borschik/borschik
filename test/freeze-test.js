@@ -129,6 +129,7 @@ function testFreeze(tech, dir, inPath, outPath, okPath, freeze, minimize) {
 
 describe('freeze from .css (-t css)', function() {
     testFreeze('css', 'freeze_from_css', 'test.css', '_test.css', 'ok_css.css', true, false);
+    testFreeze('css', 'freeze_from_css', '1_test.css', '1__test.css', '1_result.css', true, false);
 });
 
 describe('freeze excepts from .css (-t css)', function() {

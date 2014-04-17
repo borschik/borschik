@@ -1,3 +1,7 @@
+## 1.0.3
+
+-  Improve compatibility with LESS [#59](https://github.com/bem/borschik/issues/59)
+
 ## 1.0.2
 
 -  UglifyJS options support in JS tech.

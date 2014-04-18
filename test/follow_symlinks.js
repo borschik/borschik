@@ -88,12 +88,10 @@ describe('follow_symlinks', function() {
                         ASSERT.equal(FS.readFileSync(resultFile, 'utf-8'), test.out);
                         cb();
                     } catch(e) {
-                        cb(e.toString());
+                        cb(e);
                     }
                 })
-                .fail(function(e) {
-                    cb(e.message);
-                });
+                .fail(cb);
         })
     });
 

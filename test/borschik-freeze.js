@@ -40,12 +40,10 @@ describe('borschik freeze', function() {
                     ASSERT.deepEqual(JSON.parse(json), res);
                     cb();
                 } catch(e) {
-                    cb(e.toString());
+                    cb(e);
                 }
             })
-            .fail(function(e) {
-                cb(e.message);
-            });
+            .fail(cb);
     });
 
 });

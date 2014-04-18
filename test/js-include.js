@@ -51,12 +51,10 @@ describe('js-include:', function() {
                         );
                         cb();
                     } catch(e) {
-                        cb(e.toString());
+                        cb(e);
                     }
                 })
-                .fail(function(e) {
-                    cb(e.message);
-                });
+                .fail(cb);
         });
 
     });

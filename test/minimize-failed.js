@@ -40,9 +40,8 @@ describe('Useful info in case of failed minimize:', function() {
                 try {
                     ASSERT.equal(FS.existsSync(testJSErrorFile), true);
                     cb();
-
                 } catch(e) {
-                    cb(e.message);
+                    cb(e);
                 }
             });
 
@@ -64,9 +63,8 @@ describe('Useful info in case of failed minimize:', function() {
                 try {
                     ASSERT.equal(FS.existsSync(testCSSErrorFile), true);
                     cb();
-
                 } catch(e) {
-                    cb(e.message);
+                    cb(e);
                 }
             });
 

@@ -49,6 +49,17 @@ describe('freeze-inline:', function() {
 
     });
 
+    describe('encodeURI: ', function() {
+
+        beforeEach(function() {
+            var config = FS.readFileSync(PATH.resolve(basePath, 'borschik-encodeURI.json'));
+            FS.writeFileSync(configPath, config);
+        });
+
+        generateTests('encodeURI');
+
+    });
+
     function generateTests(testSuffix) {
         TESTS.forEach(function(test) {
 
@@ -77,12 +88,10 @@ describe('freeze-inline:', function() {
                             );
                             cb();
                         } catch(e) {
-                            cb(e.toString());
+                            cb(e);
                         }
                     })
-                    .fail(function(e) {
-                        cb(e.toString());
-                    });
+                    .fail(cb);
             });
 
         });

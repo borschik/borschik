@@ -94,12 +94,10 @@ describe('freeze-html', function() {
                         ASSERT.equal(FS.readFileSync(fakeResFile, 'utf-8'), test.out);
                         cb();
                     } catch(e) {
-                        cb(e.toString());
+                        cb(e);
                     }
                 })
-                .fail(function(e) {
-                    cb(e.message);
-                });
+                .fail(cb);
         })
     });
 

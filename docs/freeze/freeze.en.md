@@ -39,7 +39,7 @@ Borschik freezes matched files from directory `i/bg` to `i/_`
 * Borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
 
 ## resource inlining
-There is special syntax (`:encodeURIComponent:` and `:base64:`) for resource inlining.
+There is special syntax (`:encodeURI:`, `:encodeURIComponent:` and `:base64:`) for resource inlining.
 
 ```json
 {
@@ -52,7 +52,7 @@ There is special syntax (`:encodeURIComponent:` and `:base64:`) for resource inl
 
 With this config all links to resources in `i/svg_images` or `i/gif_images` will be inlined.
 
-Borschik supports `base64` and `encodeURIComponent` encoding only.
+Borschik supports `base64`, `encodeURI` and `encodeURIComponent` encoding only.
 
 Borschik supports following file formats: gif, png, svg, woff.
 

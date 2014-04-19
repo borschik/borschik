@@ -1,3 +1,7 @@
+## 1.0.4
+
+-  Добавлена поддержка метода `encodeURI` для инлайнинга ресурсов [#62](https://github.com/bem/borschik/issues/62)
+
 ## 1.0.3
 
 -  Улучшена совместимость с LESS [#59](https://github.com/bem/borschik/issues/59)

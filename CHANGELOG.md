@@ -1,3 +1,7 @@
+## 1.0.4
+
+-  Add `encodeURI` inlining method [#62](https://github.com/bem/borschik/issues/62)
+
 ## 1.0.3
 
 -  Improve compatibility with LESS [#59](https://github.com/bem/borschik/issues/59)

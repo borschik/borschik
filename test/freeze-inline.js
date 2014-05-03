@@ -24,7 +24,8 @@ describe('freeze-inline:', function() {
         {name: 'should inline gif image in js', file: 'gif.js'},
         {name: 'should inline png image in css', file: 'png.css'},
         {name: 'should inline png image in js', file: 'png.js'},
-        {name: 'should inline svg image in css', file: 'svg.css'}
+        {name: 'should inline svg image in css', file: 'svg.css'},
+        {name: 'should inline svg filter in css', file: 'svg-filter.css'}
     ];
 
     describe('base64: ', function() {

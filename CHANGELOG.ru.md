@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Исправлен инлайнинг SVG-фильтров [#64](https://github.com/bem/borschik/issues/64)
+
 ## 1.0.4
 
 -  Добавлена поддержка метода `encodeURI` для инлайнинга ресурсов [#62](https://github.com/bem/borschik/issues/62)

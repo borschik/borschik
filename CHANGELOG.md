@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Fix SVG filters inlining [#64](https://github.com/bem/borschik/issues/64)
+
 ## 1.0.4
 
 -  Add `encodeURI` inlining method [#62](https://github.com/bem/borschik/issues/62)

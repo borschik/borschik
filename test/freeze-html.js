@@ -98,6 +98,28 @@ describe('freeze-html', function() {
                     }
                 })
                 .fail(cb);
+        });
+
+        it('process as string should process ' + test.name, function(cb) {
+
+            // proccess it
+            BORSCHIK
+                .api({
+                    'freeze': true,
+                    'inputString': test.in,
+                    'basePath': PATH.dirname(fakeFile),
+                    'minimize': true,
+                    'tech': 'html'
+                })
+                .then(function(result) {
+                    try {
+                        ASSERT.equal(result, test.out);
+                        cb();
+                    } catch(e) {
+                        cb(e);
+                    }
+                })
+                .fail(cb);
         })
     });
 

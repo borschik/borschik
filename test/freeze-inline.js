@@ -95,6 +95,28 @@ describe('freeze-inline:', function() {
                     .fail(cb);
             });
 
+            it('process as string ' + test.name, function(cb) {
+
+                // proccess it
+                BORSCHIK
+                    .api({
+                        'comments': false,
+                        'freeze': true,
+                        'inputString': FS.readFileSync(input, 'utf-8'),
+                        'basePath': basePath,
+                        'minimize': false,
+                        'tech': ext.replace('.', '')
+                    })
+                    .then(function(result) {
+                        ASSERT.equal(
+                            result,
+                            FS.readFileSync(expect, 'utf-8')
+                        );
+                        cb();
+                    }, cb)
+                    .fail(cb);
+            });
+
         });
     }
 

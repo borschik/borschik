@@ -1,3 +1,22 @@
+## 1.1.0
+**New features**
+ * borschik now supports input as string [#69](https://github.com/bem/borschik/pull/69). Use `inputString` and `basePath` options in API
+```
+borschik.api({
+    basePath: '.',
+    inputString: 'var a = 1;',
+    tech: 'js'
+}).then(function(result) {
+
+}, function(error) {
+
+});
+```
+
+**Fixes**
+ * Better Windows support [#66](https://github.com/bem/borschik/pull/66)
+ * Better errors while freeze [#71](https://github.com/bem/borschik/pull/71)
+
 ## 1.0.5
 
 - Fix SVG filters inlining [#64](https://github.com/bem/borschik/issues/64)

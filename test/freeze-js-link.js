@@ -7,9 +7,10 @@ describe('techs/js-link', function() {
     var BORSCHIK = require('..');
     var CP = require('child_process');
 
-    const fakeFile = PATH.resolve(__dirname, 'js-link/test.js');
-    const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.js');
-    const freezeDir = PATH.resolve(__dirname, 'js-link/_');
+    const basePath = PATH.resolve(__dirname, 'js-link');
+    const fakeFile = PATH.resolve(basePath, 'test.js');
+    const fakeResFile = PATH.resolve(basePath, '_test.js');
+    const freezeDir = PATH.resolve(basePath, '_');
 
     afterEach(function(cb) {
         CP.exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
@@ -78,6 +79,24 @@ describe('techs/js-link', function() {
                         cb(e);
                     }
                 })
+                .fail(cb);
+        });
+
+        it('process as string js-link test ' + test.name, function(cb) {
+
+            // proccess it
+            BORSCHIK
+                .api({
+                    'freeze': true,
+                    'inputString': test.in,
+                    'basePath': basePath,
+                    'minimize': false,
+                    'tech': 'js'
+                })
+                .then(function(result) {
+                    ASSERT.equal(result, test.out);
+                    cb();
+                }, cb)
                 .fail(cb);
         })
     });

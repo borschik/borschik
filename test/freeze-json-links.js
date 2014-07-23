@@ -7,9 +7,10 @@ describe('techs/json', function() {
     var BORSCHIK = require('..');
     var CP = require('child_process');
 
-    const fakeFile = PATH.resolve(__dirname, 'js-link/test.json');
-    const fakeResFile = PATH.resolve(__dirname, 'js-link/_test.json');
-    const freezeDir = PATH.resolve(__dirname, 'js-link/_');
+    const basePath = PATH.resolve(__dirname, 'js-link');
+    const fakeFile = PATH.resolve(basePath, 'test.json');
+    const fakeResFile = PATH.resolve(basePath, '_test.json');
+    const freezeDir = PATH.resolve(basePath, '_');
 
     afterEach(function(cb) {
         CP.exec('rm -rf ' + [freezeDir, fakeFile, fakeResFile].join(' '), function() {
@@ -43,6 +44,28 @@ describe('techs/json', function() {
                 .then(function() {
                     try {
                         ASSERT.equal(FS.readFileSync(fakeResFile, 'utf-8'), test.out);
+                        cb();
+                    } catch(e) {
+                        cb(e);
+                    }
+                })
+                .fail(cb);
+        });
+
+        it('process as string json test ' + i, function(cb) {
+
+            // proccess it
+            BORSCHIK
+                .api({
+                    'freeze': true,
+                    'inputString': test.in,
+                    'basePath': basePath,
+                    'minimize': true,
+                    'tech': 'json'
+                })
+                .then(function(result) {
+                    try {
+                        result
                         cb();
                     } catch(e) {
                         cb(e);

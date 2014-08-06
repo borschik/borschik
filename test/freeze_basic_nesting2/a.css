@@ -1,0 +1,15 @@
+a {
+    p: url(test.png);
+}
+
+b {
+    p: url(test.png);
+}
+
+c {
+    p: url(no-nesting/test.png);
+}
+
+d {
+    p: url(default-behaviour/test.png);
+}

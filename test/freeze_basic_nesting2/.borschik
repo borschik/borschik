@@ -1,0 +1,17 @@
+{
+    "paths" : {
+        "./": "//a/b/"
+    },
+
+    "freeze_paths" : {
+	"./no-nesting/**": "test/test-plain/",
+	"./default-behaviour/**": "test/test-def/",
+        "./**": "test/test2/"
+    },
+
+    "freeze_nesting_levels": {
+	"test/test2/": 2,
+	"test/test-plain/": 0
+    },
+    "freeze_nesting_level": 1
+}

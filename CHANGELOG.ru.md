@@ -1,3 +1,22 @@
+## 1.1.0
+**Новые возможности**
+ * borschik теперь может обрабатывать строки на вход [#69](https://github.com/bem/borschik/pull/69). Используйте опции `inputString` и `basePath` в API
+```
+borschik.api({
+    basePath: '.',
+    inputString: 'var a = 1;',
+    tech: 'js'
+}).then(function(result) {
+
+}, function(error) {
+
+});
+```
+
+**Исправления**
+ * Улучшена поддержка Windows [#66](https://github.com/bem/borschik/pull/66)
+ * Улучшен вывод ошибок при фризе [#71](https://github.com/bem/borschik/pull/71)
+
 ## 1.0.5
 
 - Исправлен инлайнинг SVG-фильтров [#64](https://github.com/bem/borschik/issues/64)

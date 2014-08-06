@@ -53,8 +53,53 @@ describe('js-include:', function() {
                     } catch(e) {
                         cb(e);
                     }
+                }, function(error) {
+                    cb([
+                        'borschik error',
+                        error.message,
+                        error.stack
+                    ].join('\n'));
                 })
-                .fail(cb);
+                .fail(function(error) {
+                    cb('assert error: ' + error);
+                });
+        });
+
+    });
+
+    TESTS.forEach(function(test, i) {
+        var input = FS.readFileSync(PATH.resolve(basePath, test.file), 'utf-8');
+        var expect = PATH.resolve(basePath, test.file.replace('.js', '-expect.js'));
+
+        it('process as string ' + test.name, function(cb) {
+
+            // proccess it
+            BORSCHIK
+                .api({
+                    'comments': false,
+                    'freeze': false,
+                    'minimize': false,
+                    'tech': 'js',
+
+                    'inputString': input,
+                    'basePath': basePath
+                })
+                .then(function(result) {
+                    ASSERT.equal(
+                        result,
+                        FS.readFileSync(expect, 'utf-8')
+                    );
+                    cb();
+                }, function(error) {
+                    cb([
+                        'borschik error',
+                        error.message,
+                        error.stack
+                    ].join('\n'));
+                })
+                .fail(function(error) {
+                    cb('assert error: ' + error);
+                });
         });
 
     });

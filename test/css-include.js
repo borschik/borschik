@@ -64,6 +64,33 @@ describe('css-include:', function() {
                 .fail(cb);
         });
 
+        it('process as string ' + test.name, function(cb) {
+            // proccess it
+            BORSCHIK
+                .api({
+                    'comments': false,
+                    'freeze': false,
+                    'inputString': FS.readFileSync(test.input, 'utf-8'),
+                    'basePath': PATH.dirname(test.input),
+                    'minimize': false,
+                    'tech': 'css'
+                })
+                .then(function(result) {
+                    ASSERT.equal(
+                        result.trim(),
+                        FS.readFileSync(test.expect, 'utf-8').trim()
+                    );
+                    cb();
+                }, function(error) {
+                    cb([
+                        'borschik error',
+                        error,
+                        error.stack
+                    ].join('\n'));
+                })
+                .fail(cb);
+        });
+
     });
 
 });

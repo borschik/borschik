@@ -4,6 +4,7 @@ describe('Useful info in case of failed minimize:', function() {
     var BORSCHIK = require('..');
     var FS = require('fs');
     var PATH = require('path');
+    var VOW = require('vow');
 
 
     const testJS = PATH.resolve(__dirname, 'minimize-failed/fail.js');
@@ -45,6 +46,24 @@ describe('Useful info in case of failed minimize:', function() {
                 }
             });
 
+    });
+
+    it('should reject with error when process string (js)', function() {
+
+        // proccess it
+        return BORSCHIK
+            .api({
+                'freeze': true,
+                'inputString': FS.readFileSync(testJS, 'utf-8'),
+                'basePath': PATH.dirname(testJS),
+                'minimize': true,
+                'tech': 'js'
+            })
+            .then(function() {
+                return VOW.reject('passed');
+            }, function() {
+                return VOW.resolve();
+            });
     });
 
     it('should write file error result to "filename.borschik-error" (css)', function(cb) {

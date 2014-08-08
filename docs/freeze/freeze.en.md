@@ -129,4 +129,39 @@ X/
   N/
     ya0AroXD40MFsUD5H4-a4glA8.gif
 ```
+## setting nesting level per directory
+```json
+{
+    "freeze_paths": {
+        "i/bg/**": "bg_freeze",
+        "i/gif/**": "gif_freeze",
+        "i/usr/**": "freeze"
+    },
 
+    "freeze_nesting_levels": {
+        "freeze": 0,
+        "gif_freeze": 2
+    },
+    
+    "freeze_nesting_level": 1
+}
+```
+Nesting levels could also be set independently for each freeze directory with option `"freeze_nesting_levels"`.
+In this case `"freeze_nesting_level"` option will affect only on those directories, which are missing in `"freeze_nesting_levels"` list.
+Dir listing for the example above
+```
+freeze/
+  K/
+    rFb8YmKEifJ7suf3m5vG_l5Dg8.png
+  Z/
+    Z8Lwgbnxrs_lm4k740M-a40Ar1.jpg
+bg_freeze/
+  2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.jpg
+  X31pO5JJJKEifJ7sfvuf3mGeD_8.jpg
+gif_freeze/
+  L/
+    a/
+      6qi18Z8LwgnZdsAr1qy1GwCwo.gif
+  X/
+    N/
+      ya0AroXD40MFsUD5H4-a4glA8.gif

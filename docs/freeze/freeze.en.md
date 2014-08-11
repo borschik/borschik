@@ -129,7 +129,7 @@ X/
   N/
     ya0AroXD40MFsUD5H4-a4glA8.gif
 ```
-## setting nesting level per directory
+### setting nesting level per directory
 ```json
 {
     "freeze_paths": {
@@ -150,14 +150,19 @@ Nesting levels could also be set independently for each freeze directory with op
 In this case `"freeze_nesting_level"` option will affect only on those directories, which are missing in `"freeze_nesting_levels"` list.
 Dir listing for the example above
 ```
+# redefined to level 0
 freeze/
+  2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.jpg
+  X31pO5JJJKEifJ7sfvuf3mGeD_8.jpg
+ 
+# default level 1 
+bg_freeze/
   K/
     rFb8YmKEifJ7suf3m5vG_l5Dg8.png
   Z/
     Z8Lwgbnxrs_lm4k740M-a40Ar1.jpg
-bg_freeze/
-  2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.jpg
-  X31pO5JJJKEifJ7sfvuf3mGeD_8.jpg
+
+# redefined to level 2
 gif_freeze/
   L/
     a/

@@ -1,3 +1,7 @@
+## 1.3.0
+**Новые возможности**
+ * Настраивать фриз во вложенные папки теперь можно [отдельно для каждой директории](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#setting-nesting-level-per-directory).
+
 ## 1.2.0
 **Новые возможности**
  * borschik теперь поддерживает в API `techOptions` как объект [#72](https://github.com/bem/borschik/pull/72)

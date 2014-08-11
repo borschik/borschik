@@ -1,3 +1,7 @@
+## 1.3.0
+**New features**
+ * Add support for [per directory freeze nesting level](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#setting-nesting-level-per-directory).
+
 ## 1.2.0
 **New features**
  * borschik now supports `techOptions` as object in API [#72](https://github.com/bem/borschik/pull/72)

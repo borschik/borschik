@@ -1,3 +1,22 @@
+## 1.2.0
+**New features**
+ * borschik now supports `techOptions` as object in API [#72](https://github.com/bem/borschik/pull/72)
+```js
+// old API (also supported)
+borschik.api({
+    techOptions: '{ "uglify": { "warnings": true } }'    
+});
+
+// new API
+borschik.api({
+    techOptions: {
+        uglify: {
+            warnings: true
+        }    
+    }
+});
+```
+
 ## 1.1.0
 **New features**
  * borschik now supports input as string [#69](https://github.com/bem/borschik/pull/69). Use `inputString` and `basePath` options in API

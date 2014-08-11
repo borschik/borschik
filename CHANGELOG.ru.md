@@ -1,3 +1,22 @@
+## 1.2.0
+**Новые возможности**
+ * borschik теперь поддерживает в API `techOptions` как объект [#72](https://github.com/bem/borschik/pull/72)
+```js
+// было (этот вариант тоже поддерживается)
+borschik.api({
+    techOptions: '{ "uglify": { "warnings": true } }'    
+});
+
+// стало
+borschik.api({
+    techOptions: {
+        uglify: {
+            warnings: true
+        }    
+    }
+});
+```
+
 ## 1.1.0
 **Новые возможности**
  * borschik теперь может обрабатывать строки на вход [#69](https://github.com/bem/borschik/pull/69). Используйте опции `inputString` и `basePath` в API

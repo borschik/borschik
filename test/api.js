@@ -39,4 +39,57 @@ describe('API', function() {
         });
     });
 
+    describe('techOptions', function() {
+
+        beforeEach(function() {
+            var base = require('../lib/tech');
+            var that = this;
+
+            this.emptyTech = {
+                Tech: base.Tech.inherit({
+                    process: function() {
+                        return VOW.fulfill(this.opts);
+                    }
+                })
+            }
+        });
+
+        it('should accept techOptions as JSON-string', function() {
+            return BORSCHIK.api({
+                basePath: '.',
+                inputString: 'var a = 1;',
+                tech: this.emptyTech,
+                techOptions: '{"a": 1}'
+            }).then(function(opts) {
+                ASSERT.deepEqual({a: 1}, opts.techOptions);
+            });
+        });
+
+        it('should accept techOptions as object', function() {
+            return BORSCHIK.api({
+                basePath: '.',
+                inputString: 'var a = 1;',
+                tech: this.emptyTech,
+                techOptions: {"a": 1}
+            }).then(function(opts) {
+                ASSERT.deepEqual({a: 1}, opts.techOptions);
+            });
+        });
+
+        it('should reject if techOptions is not a valid JSON', function() {
+            return BORSCHIK.api({
+                basePath: '.',
+                inputString: 'var a = 1;',
+                tech: this.emptyTech,
+                techOptions: '{a: 1}'
+            }).then(function() {
+                return VOW.reject('fulfilled');
+
+            }, function(e) {
+                return VOW.fulfill();
+            });
+        });
+
+    })
+
 });

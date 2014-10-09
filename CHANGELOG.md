@@ -1,3 +1,9 @@
+## 1.3.2
+You can now freeze `.eot` files.
+
+## 1.3.1
+You can now freeze `.ico` files.
+
 ## 1.3.0
 **New features**
  * Add support for [per directory freeze nesting level](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#setting-nesting-level-per-directory).

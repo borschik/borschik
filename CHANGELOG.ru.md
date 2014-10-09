@@ -1,3 +1,9 @@
+## 1.3.2
+Теперь можно фризить `.eot` файлы.
+
+## 1.3.1
+Теперь можно фризить `.ico` файлы.
+
 ## 1.3.0
 **Новые возможности**
  * Настраивать фриз во вложенные папки теперь можно [отдельно для каждой директории](https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md#setting-nesting-level-per-directory).

@@ -21,7 +21,9 @@
     "vow": "0.3.13",
     "vow-fs": "0.3.2",
     "csso": "1.3.11",
-    "uglify-js": "2.4.15"
+    "uglify-js": "2.4.15",
+    "source-map": "0.1.40",
+    "esprima": "1.2.2"
   },
   "devDependencies": {
     "istanbul": "0.2.x",

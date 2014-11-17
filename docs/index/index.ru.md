@@ -42,7 +42,7 @@ borschik [OPTIONS]
                                                                           [boolean]
     -m MINIMIZE, --minimize=MINIMIZE    Минимизация входного файла (по умолчанию: true)
                                                                           [boolean]
-    -c COMMENTS, --comments=COMMENTS    Поясняющие комментарии к склееным файлам (по умолчанию: true)
+    -c COMMENTS, --comments=COMMENTS    Поясняющие комментарии к склеенным файлам (по умолчанию: true)
                                                                           [boolean]
 
 ## Поддерживаемые технологии

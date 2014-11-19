@@ -1,8 +1,8 @@
 # Static resources "freeze"
 
-What means "freeze", description and advantages of this technology you can get in [article at bem.info](http://bem.info/articles/borschik).
+What means "freeze", description and advantages of this technology isyou can get in [article at bem.info](http://bem.info/articles/borschik).
 
-## .borschik config
+## `.borschik` config
 
 At first we need config. It's located in file `.borschik`.
 
@@ -18,7 +18,7 @@ File `.borschik` relates to its own directory and all subdirectories.
 
 `freeze_paths` — this key defines which files will be frozen, and where any transformations in the file path of the frozen result.
 
-For example, when Borschik processes CSS file and finds links to images in `/i/bg`,
+For example, when borschik processes CSS file and finds links to images in `/i/bg`,
 borschik freezes these links, changing their path to `freeze/bg` and creates image copy in this path.
 
 Object key — wildcards whose files will be frozen. Wildcards are matched with [minimatch](https://github.com/isaacs/minimatch).
@@ -32,11 +32,11 @@ Other example
     }
 }
 ```
-Borschik freezes matched files from directory `i/bg` to `i/_`
+borschik freezes matched files from directory `i/bg` to `i/_`
 
 **Important note:**
-* Borschik does not freeze all files in directories but only those linked by processed files.
-* Borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
+* borschik does not freeze all files in directories but only those linked by processed files.
+* borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
 
 ## resource inlining
 There is special syntax (`:encodeURI:`, `:encodeURIComponent:` and `:base64:`) for resource inlining.
@@ -52,9 +52,9 @@ There is special syntax (`:encodeURI:`, `:encodeURIComponent:` and `:base64:`) f
 
 With this config all links to resources in `i/svg_images` or `i/gif_images` will be inlined.
 
-Borschik supports `base64`, `encodeURI` and `encodeURIComponent` encoding only.
+borschik supports `base64`, `encodeURI` and `encodeURIComponent` encoding only.
 
-Borschik supports following file formats: gif, png, svg, woff.
+borschik supports following file formats: gif, png, svg, woff.
 
 Example
 ```css

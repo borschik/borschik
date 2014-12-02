@@ -1,12 +1,13 @@
-# Static resources "freeze"
+# Static resources ”freeze“
 
-What means "freeze", description and advantages of this technology isyou can get in [article at bem.info](http://bem.info/articles/borschik).
+What means ”freeze“: description and advantages of this technology you can get in [article at bem.info](http://bem.info/articles/borschik).
 
 ## `.borschik` config
 
-At first we need config. It's located in file `.borschik`.
+At first we need a config. It is located in `.borschik` file.
 
-File `.borschik` relates to its own directory and all subdirectories.
+`.borschik` file relates to its own directory and all subdirectories.
+
 ```js
 {
     "freeze_paths": {
@@ -16,13 +17,13 @@ File `.borschik` relates to its own directory and all subdirectories.
 }
 ```
 
-`freeze_paths` — this key defines which files will be frozen, and where any transformations in the file path of the frozen result.
+`freeze_paths` – a key that defines which files will be frozen, and where the transformation results of these pathes will be stored.
 
-For example, when borschik processes CSS file and finds links to images in `/i/bg`,
-borschik freezes these links, changing their path to `freeze/bg` and creates image copy in this path.
+For example, when borschik processes CSS files and finds links to images in `/i/bg` directory,
+borschik freezes these links, changes their pathes to `freeze/bg`, and creates the image copies in `freeze/bg` directory.
 
-Object key — wildcards whose files will be frozen. Wildcards are matched with [minimatch](https://github.com/isaacs/minimatch).
-Key value - directory for resulting frozen files, relative to the config path.
+An object key – a wildcard whose files will be frozen. Wildcards are matched with [minimatch](https://github.com/isaacs/minimatch).
+A key value – a directory for resulting the frozen files, relative to the config path.
 
 Other example
 ```js
@@ -34,11 +35,11 @@ Other example
 ```
 borschik freezes matched files from directory `i/bg` to `i/_`
 
-**Important note:**
+**Important note**
 * borschik does not freeze all files in directories but only those linked by processed files.
 * borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
 
-## resource inlining
+## Resource inlining
 There is special syntax (`:encodeURI:`, `:encodeURIComponent:` and `:base64:`) for resource inlining.
 
 ```json
@@ -52,9 +53,9 @@ There is special syntax (`:encodeURI:`, `:encodeURIComponent:` and `:base64:`) f
 
 With this config all links to resources in `i/svg_images` or `i/gif_images` will be inlined.
 
-borschik supports `base64`, `encodeURI` and `encodeURIComponent` encoding only.
+borschik supports `base64`, `encodeURI`, and `encodeURIComponent` encoding only.
 
-borschik supports following file formats: gif, png, svg, woff.
+borschik supports the following file formats: gif, png, svg, woff.
 
 Example
 ```css
@@ -76,7 +77,7 @@ Result
 }
 ```
 
-Inlining in JS-files with `borschik.link()` is also supported.
+Inlining in JS files with `borschik.link()` is also supported.
 
 ## nesting level
 ```json
@@ -94,7 +95,7 @@ Nesting level is used to improve server performance for projects with a lot of f
 
 Servers have the problem to read directory listing with more then 1000 files and developers ussualy split such dirs.
 
-Some examples:
+Some examples
 
 Dir listing for `"freeze_nesting_level": 0` (default)
 ```
@@ -142,7 +143,7 @@ X/
         "freeze": 0,
         "gif_freeze": 2
     },
-    
+
     "freeze_nesting_level": 1
 }
 ```
@@ -154,8 +155,8 @@ Dir listing for the example above
 freeze/
   2bnxrFb8Ym4k7qx4vRv8Xs_l5Dg.jpg
   X31pO5JJJKEifJ7sfvuf3mGeD_8.jpg
- 
-# default level 1 
+
+# default level 1
 bg_freeze/
   K/
     rFb8YmKEifJ7suf3m5vG_l5Dg8.png

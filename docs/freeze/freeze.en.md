@@ -1,4 +1,4 @@
-# Static resources ”freeze“
+# Static resources freeze
 
 What means ”freeze“: description and advantages of this technology you can get in [article at bem.info](http://bem.info/articles/borschik).
 

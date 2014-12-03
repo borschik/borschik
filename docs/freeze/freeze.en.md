@@ -1,6 +1,6 @@
 # Static resources freeze
 
-What means ”freeze“: description and advantages of this technology you can get in [article at bem.info](http://bem.info/articles/borschik).
+What means ”freeze“: description and advantages of this technology you can get in an [article at bem.info](https://bem.info/articles/borschik/#Static-resources-«freeze»).
 
 ## `.borschik` config
 

@@ -1,7 +1,7 @@
 # JS include notations
 
-borschik can merge JS files.
-But there is no standard method for this in Javascript so borschik uses the following syntax `borschik:include:path/to/fie.js`.
+`borschik` can merge JS files.
+But there is no standard method for this in Javascript so `borschik` uses the following syntax `borschik:include:path/to/file.js`.
 
 This expression must be in:
 * block comment `/*borschik:include:file.js*/`

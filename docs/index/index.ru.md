@@ -1,18 +1,18 @@
 # borschik
 
-borschik — это расширяемый сборщик файлов текстовых форматов.
+`borschik` — это расширяемый сборщик файлов текстовых форматов.
 Его основной задачей является сборка статических файлов веб-проектов (CSS, JS и т.д.).
 
-[Статья про borschik на bem.info](http://bit.ly/ru-borschik)
+Для дополнительной информации читайте [статью про borschik](https://ru.bem.info/articles/borschik/) на bem.info.
 
 ## Установка
 
 Требования:
 
-* nodejs >= 0.6.x&nbsp;— [http://nodejs.org](http://nodejs.org)
-* npm&nbsp;— [http://github.com/isaacs/npm/](http://github.com/isaacs/npm/)
+* [NodeJS](http://nodejs.org) >= 0.8.x
+* [npm](https://github.com/isaacs/npm/)
 
-Установка из npm для использования из командой строки:
+Установка из `npm` для использования из командой строки:
 
     npm install borschik -g
 

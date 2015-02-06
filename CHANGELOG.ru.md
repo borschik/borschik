@@ -11,6 +11,7 @@
 ## 1.2.0
 **Новые возможности**
  * borschik теперь поддерживает в API `techOptions` как объект [#72](https://github.com/bem/borschik/pull/72)
+ 
 ```js
 // было (этот вариант тоже поддерживается)
 borschik.api({

@@ -274,8 +274,8 @@ describe('freeze options: no', function() {
 
 });
 
-describe('CSSO yes, tech css', function() {
-    testFreeze('css', 'csso_test', 'a.css', '_a.css', 'ok_css.css', true, true);
+describe('CleanCSS yes, tech css', function() {
+    testFreeze('css', 'cleancss_test', 'a.css', '_a.css', 'ok_css.css', true, true);
 });
 
 function testJS(tech, dir, inPath, outPath, okPath) {

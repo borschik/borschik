@@ -48,7 +48,7 @@ describe('API', function() {
             this.emptyTech = {
                 Tech: base.Tech.inherit({
                     process: function() {
-                        return VOW.fulfill(this.opts);
+                        return VOW.resolve(this.opts);
                     }
                 })
             }
@@ -86,7 +86,7 @@ describe('API', function() {
                 return VOW.reject('fulfilled');
 
             }, function(e) {
-                return VOW.fulfill();
+                return VOW.resolve();
             });
         });
 

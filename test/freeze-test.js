@@ -99,6 +99,7 @@ describe('isFreezableUrl', function() {
         ASSERT.ok(FREEZE.isFreezableUrl('xxx.eot'));
         ASSERT.ok(FREEZE.isFreezableUrl('xxx.otf'));
         ASSERT.ok(FREEZE.isFreezableUrl('xxx.woff'));
+        ASSERT.ok(FREEZE.isFreezableUrl('xxx.woff2'));
     });
 
 });

@@ -34,7 +34,7 @@ describe('borschik freeze', function() {
                         "borschik-freeze/a.css": "//yandex.st/prj/_LWJmVQ8Q4Kn5C4mK3iYXHyieR7g.css",
                         "borschik-freeze/js/1.js": "//yandex.st/prj/_s2waZ-cd23dy_WqyHXmzbhscY_k.js",
                         "borschik-freeze/js/subdir/2.js": "//yandex.st/prj/_MGOy381jDKO0QzbHxeo46xQNEtQ.js",
-                        "borschik-freeze/result.json": "//yandex.st/prj/_2jmj7l5rSw0yVb_vlWAYkK_YBwk.json",
+                        "borschik-freeze/result.json": "borschik-freeze/result.json",
                         "borschik-freeze/test.png": "//yandex.st/prj/_wFPs-e1B3wMRud8TzGw7YHjS08I.png"
                     };
                     // console.log('ACTUAL');

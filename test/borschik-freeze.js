@@ -37,6 +37,11 @@ describe('borschik freeze', function() {
                         "borschik-freeze/result.json": "borschik-freeze/result.json",
                         "borschik-freeze/test.png": "//yandex.st/prj/_wFPs-e1B3wMRud8TzGw7YHjS08I.png"
                     };
+                    // console.log('ACTUAL');
+                    // console.log(JSON.parse(json));
+                    // console.log('EXPECTED');
+                    // console.log(res);    
+
                     ASSERT.deepEqual(JSON.parse(json), res);
                     cb();
                 } catch(e) {

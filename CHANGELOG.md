@@ -1,3 +1,7 @@
+## 1.4.0
+- You can now freeze `.woff2`, `.js`, `.css` and `.cur` files.
+- `vow-fs` was updated to `0.3.4`.
+
 ## 1.3.2
 You can now freeze `.eot` files.
 

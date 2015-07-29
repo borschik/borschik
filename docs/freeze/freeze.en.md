@@ -77,6 +77,28 @@ Result
 }
 ```
 
+A key value of `freeze_paths` can be a literal object with inlining size limit properties.
+
+```json
+{
+    "freeze_paths": {
+        "i/svg_images/**": {
+                "inliningType": "encodeURIComponent",
+                "inliningLimit": 1024,
+                "freezePath": "i/_/"
+        },
+        "i/gif_images/**": {
+                "inliningType": "base64",
+                "inliningLimit": 1024,
+                "freezePath": "i/_/"
+        }
+    }
+}
+```
+
+With this config links to resources in `i/svg_images` or `i/gif_images` will be inlined if their size is not exceeded 1 kb.
+If size of file from directory `i/svg_images` or `i/gif_images` is exceeded 1 kb then borschik freezes matched file to directory `i/_`.
+
 Inlining in JS files with `borschik.link()` is also supported.
 
 ## nesting level

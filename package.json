@@ -15,13 +15,13 @@
     "borschik": "./bin/borschik"
   },
   "dependencies": {
-    "minimatch": "0.2.14",
+    "minimatch": "3.0.0",
     "coa": "0.4.0",
-    "inherit": "2.2.1",
-    "vow": "0.4.8",
+    "inherit": "2.2.3",
+    "vow": "0.4.12",
     "vow-fs": "0.3.4",
-    "csso": "1.4.2",
-    "uglify-js": "2.4.24"
+    "csso": "1.5.1",
+    "uglify-js": "2.6.1"
   },
   "devDependencies": {
     "istanbul": "0.2.x",

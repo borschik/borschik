@@ -1,3 +1,11 @@
+## 1.5.1
+- `uglify-js` updated to 2.6.1
+- `csso` updated to 1.5.1
+
+## 1.5.0
+- `uglify-js` updated to 2.4.24
+- `csso` updated to 1.4.2
+
 ## 1.4.0
 - You can now freeze `.woff2`, `.js`, `.css` and `.cur` files.
 - `vow-fs` was updated to `0.3.4`.

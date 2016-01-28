@@ -1,3 +1,6 @@
+## 1.5.2
+- `csso` updated to 1.5.4
+
 ## 1.5.1
 - `uglify-js` updated to 2.6.1
 - `csso` updated to 1.5.1

@@ -1,3 +1,18 @@
+# 1.5.3
+ * Исправлена обработка ошибок в `enb-borschik` [#112](https://github.com/bem/borschik/pull/112)
+ * `csso` обновлен до 1.7.0 [#116](https://github.com/bem/borschik/pull/116)
+ * `uglify-js` обновлен до 2.6.2 [#113](https://github.com/bem/borschik/pull/113), [#108](https://github.com/bem/borschik/issues/108), [#106](https://github.com/bem/borschik/issues/106)
+ * `UglifyJS` теперь показывает понятные ошибки минификации [#114](https://github.com/bem/borschik/pull/114)
+```
+Error: Unexpected token: name (foo) (line: 7437, col: 12, pos: 312592)
+  7435 |        };
+  7436 |    } else {
+  7437 |        let foo = 'bar';
+--------------------^
+  7438 |        result = {
+  7439 |            result: 0
+```
+
 ## 1.5.2
 - `csso` обновлен до версии 1.5.4
 

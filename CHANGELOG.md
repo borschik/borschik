@@ -1,3 +1,18 @@
+# 1.5.3
+ * Fix `enb-borschik` error processing [#112](https://github.com/bem/borschik/pull/112)
+ * `csso` update to 1.7.0 with a lot of fixes and speed improvements [#116](https://github.com/bem/borschik/pull/116)
+ * `uglify-js` updated to 2.6.2 [#113](https://github.com/bem/borschik/pull/113), [#108](https://github.com/bem/borschik/issues/108), [#106](https://github.com/bem/borschik/issues/106)
+ * UglifyJS has clear pretty error output. [#114](https://github.com/bem/borschik/pull/114)
+```
+Error: Unexpected token: name (foo) (line: 7437, col: 12, pos: 312592)
+  7435 |        };
+  7436 |    } else {
+  7437 |        let foo = 'bar';
+--------------------^
+  7438 |        result = {
+  7439 |            result: 0
+```
+
 ## 1.5.2
 - `csso` updated to 1.5.4
 

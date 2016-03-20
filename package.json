@@ -2,11 +2,11 @@
   "name": "borschik",
   "description": "Extendable builder for text-based file formats",
   "version": "1.5.3",
-  "homepage": "http://github.com/bem/borschik",
+  "homepage": "http://github.com/borschik/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bem/borschik.git"
+    "url": "git://github.com/borschik/borschik.git"
   },
   "directories": {
     "lib": "./lib"

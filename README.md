@@ -1,7 +1,7 @@
 # borschik
-[![Build Status](https://secure.travis-ci.org/bem/borschik.svg?branch=master)](http://travis-ci.org/bem/borschik)
+[![Build Status](https://secure.travis-ci.org/borschik/borschik.svg?branch=master)](http://travis-ci.org/borschik/borschik)
 [![NPM version](https://badge.fury.io/js/borschik.svg)](http://badge.fury.io/js/borschik)
-[![Dependency Status](https://david-dm.org/bem/borschik.svg)](https://david-dm.org/bem/borschik)
+[![Dependency Status](https://david-dm.org/borschik/borschik.svg)](https://david-dm.org/borschik/borschik)
 
 
 #English

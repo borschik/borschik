@@ -18,7 +18,7 @@ From NPM, for use as a command line app:
 
 From Git:
 
-    git clone git://github.com/bem/borschik.git
+    git clone git://github.com/borschik/borschik.git
 
 ## Usage
 
@@ -78,11 +78,11 @@ $ borschik --input=myfile.js --tech-options='{"uglify":{"output":{"max_line_len"
   },
 
   // freeze nesting level (default 0)
-  // read more https://github.com/bem/borschik/blob/master/docs/freeze/freeze.en.md
+  // read more https://github.com/borschik/borschik/blob/master/docs/freeze/freeze.en.md
   "freeze_nesting_level": <level>
 }
 ```
 
 
 ## License
-[MIT](https://github.com/bem/borschik/blob/master/MIT-LICENSE.txt)
+[MIT](https://github.com/borschik/borschik/blob/master/MIT-LICENSE.txt)

@@ -18,7 +18,7 @@
 
 Установка из Git:
 
-    git clone git://github.com/bem/borschik.git
+    git clone git://github.com/borschik/borschik.git
 
 ## Использование
 
@@ -74,4 +74,4 @@ borschik [OPTIONS]
 
 
 ## Лицензия
-[MIT](https://github.com/bem/borschik/blob/master/MIT-LICENSE.txt)
+[MIT](https://github.com/borschik/borschik/blob/master/MIT-LICENSE.txt)

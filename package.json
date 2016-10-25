@@ -24,13 +24,13 @@
     "uglify-js": "2.7.4"
   },
   "devDependencies": {
-    "istanbul": "0.2.x",
-    "mocha-istanbul": "0.2.x",
-    "mocha": "1.20.x"
+    "coveralls": "^2.11.14",
+    "mocha": "^3.1.2",
+    "nyc": "^8.3.2"
   },
   "scripts": {
-    "test": "make test",
-    "coverage": "make coverage"
+    "test": "nyc mocha",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "engines": [
     "node >= 0.8.0"

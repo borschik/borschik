@@ -1,3 +1,23 @@
+# 1.6.1
+
+### Исправления
+
+* В технологии `css` исправлено получение пути к файлу ресурса (@blond [#124]).
+
+[#124]: https://github.com/borschik/borschik/pull/124
+
+### Зависимости
+
+* `uglify-js` обновлён до `2.7.4`.
+* `minimatch` обновлён до `3.0.3`.
+* `coa` обновлён до `1.0.1`.
+* `inherit` обновлён до `2.2.6`.
+* `vow-fs` обновлён до `0.3.6`.
+
+# 1.6.0
+
+* `csso` обновлён до `2.0.0`.
+
 # 1.5.3
  * Исправлена обработка ошибок в `enb-borschik` [#112](https://github.com/borschik/borschik/pull/112)
  * `csso` обновлен до 1.7.0 [#116](https://github.com/borschik/borschik/pull/116)
@@ -45,7 +65,7 @@ Error: Unexpected token: name (foo) (line: 7437, col: 12, pos: 312592)
 ```js
 // было (этот вариант тоже поддерживается)
 borschik.api({
-    techOptions: '{ "uglify": { "warnings": true } }'    
+    techOptions: '{ "uglify": { "warnings": true } }'
 });
 
 // стало
@@ -53,7 +73,7 @@ borschik.api({
     techOptions: {
         uglify: {
             warnings: true
-        }    
+        }
     }
 });
 ```

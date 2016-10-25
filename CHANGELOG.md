@@ -1,3 +1,23 @@
+# 1.6.1
+
+### Bug fixes
+
+* Fixed path processing in `css` tech (@blond [#124]).
+
+[#124]: https://github.com/borschik/borschik/pull/124
+
+### Dependencies
+
+* `uglify-js` updated to `2.7.4`.
+* `minimatch` updated to `3.0.3`.
+* `coa` updated to `1.0.1`.
+* `inherit` updated to `2.2.6`.
+* `vow-fs` updated to `0.3.6`.
+
+# 1.6.0
+
+* `csso` updated to `2.0.0`.
+
 # 1.5.3
  * Fix `enb-borschik` error processing [#112](https://github.com/borschik/borschik/pull/112)
  * `csso` update to 1.7.0 with a lot of fixes and speed improvements [#116](https://github.com/borschik/borschik/pull/116)
@@ -45,7 +65,7 @@ You can now freeze `.ico` files.
 ```js
 // old API (also supported)
 borschik.api({
-    techOptions: '{ "uglify": { "warnings": true } }'    
+    techOptions: '{ "uglify": { "warnings": true } }'
 });
 
 // new API
@@ -53,7 +73,7 @@ borschik.api({
     techOptions: {
         uglify: {
             warnings: true
-        }    
+        }
     }
 });
 ```

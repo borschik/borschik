@@ -15,13 +15,16 @@
     "borschik": "./bin/borschik"
   },
   "dependencies": {
-    "minimatch": "3.0.3",
     "coa": "1.0.1",
-    "inherit": "2.2.6",
-    "vow": "0.4.12",
-    "vow-fs": "0.3.6",
     "csso": "^2.0.0",
-    "uglify-js": "2.7.4"
+    "hash-obj": "1.0.0",
+    "inherit": "2.2.6",
+    "minimatch": "3.0.3",
+    "mkdirp": "0.5.1",
+    "object-assign": "4.1.0",
+    "uglify-js": "2.7.4",
+    "vow": "0.4.12",
+    "vow-fs": "0.3.6"
   },
   "devDependencies": {
     "coveralls": "^2.11.14",

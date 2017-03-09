@@ -16,32 +16,9 @@ var BORSCHIK = require('..'),
 /** @name beforeEach @function */
 /** @name afterEach @function */
 
-function loadTestImage(path) {
-    return readFile(path || testImagePath);
-}
-
 function readFile(path) {
     return FS.readFileSync(PATH.resolve(__dirname, path));
 }
-
-describe('sha1Base64', function() {
-    var sha1base64;
-
-    beforeEach(function() {
-        sha1base64 = FREEZE.sha1Base64(loadTestImage());
-    });
-
-    it('sha1base64', function() {
-        ASSERT.equal(sha1base64, 'wFPs+e1B3wMRud8TzGw7YHjS08I=');
-    });
-});
-
-describe('fixBase64', function() {
-
-    it('+-a+b/c=', function() {
-        ASSERT.equal(FREEZE.fixBase64('+-a+b/c='), 'a-b_c');
-    });
-});
 
 describe('loadConfig', function() {
 

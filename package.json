@@ -33,7 +33,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "engines": [
-    "node >= 0.8.0"
+    "node >= 0.10.0"
   ],
   "license": "MIT"
 }

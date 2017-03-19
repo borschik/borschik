@@ -15,17 +15,17 @@ describe('lib/techs/css-base', function() {
 
         it('should save GET-query string', function() {
             this.file = new cssBase.File(this.tech, '1.css?foo=bar', {});
-            ASSERT.equal(this.file.processLink(), '"1.css?foo=bar"')
+            ASSERT.equal(this.file.processLink('.'), '"1.css?foo=bar"')
         });
 
         it('should save hash string', function() {
             this.file = new cssBase.File(this.tech, '1.css#foo', {});
-            ASSERT.equal(this.file.processLink(), '"1.css#foo"')
+            ASSERT.equal(this.file.processLink('.'), '"1.css#foo"')
         });
 
         it('should save GET-query and hash string', function() {
             this.file = new cssBase.File(this.tech, '1.css?foo=bar#bar', {});
-            ASSERT.equal(this.file.processLink(), '"1.css?foo=bar#bar"')
+            ASSERT.equal(this.file.processLink('.'), '"1.css?foo=bar#bar"')
         });
     });
 

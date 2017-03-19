@@ -1,3 +1,15 @@
+# 1.7.0
+
+* Freeze hash function was moved to separate package [borschik-hash](https://github.com/borschik/borschik-hash) (@blond [#132]).
+* Support for node 0.8.0 was dropped (@Yeti-or [#133]).
+
+### Dependencies
+
+* `csso` updated to `^3.0.0`.
+* `uglify-js` updated to `2.8.14`.
+* `minimatch` updated to `3.0.3`.
+* `vow` updated to `0.4.15`.
+
 # 1.6.1
 
 ### Bug fixes

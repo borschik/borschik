@@ -20,7 +20,7 @@
     "csso": "^3.0.0",
     "inherit": "2.2.6",
     "minimatch": "3.0.3",
-    "uglify-js": "2.8.14",
+    "uglify-js": "2.8.21",
     "vow": "0.4.15",
     "vow-fs": "0.3.6"
   },

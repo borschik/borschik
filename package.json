@@ -16,18 +16,18 @@
   },
   "dependencies": {
     "borschik-hash": "1.1.1",
-    "coa": "1.0.1",
-    "csso": "^3.0.0",
+    "coa": "1.0.3",
+    "csso": "^3.1.1",
     "inherit": "2.2.6",
-    "minimatch": "3.0.3",
-    "uglify-js": "2.8.21",
-    "vow": "0.4.15",
+    "minimatch": "3.0.4",
+    "uglify-js": "2.8.29",
+    "vow": "0.4.16",
     "vow-fs": "0.3.6"
   },
   "devDependencies": {
-    "coveralls": "^2.11.14",
-    "mocha": "^3.1.2",
-    "nyc": "^8.3.2"
+    "coveralls": "^2.13.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2"
   },
   "scripts": {
     "test": "nyc mocha",

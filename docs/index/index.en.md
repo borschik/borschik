@@ -54,9 +54,9 @@ The available options are:
 | Include        | X    | -      | X         | -      |
 | Url processing | X    | X      | X         | X      |
 | Url freeze     | X    | X      | X         | X      |
-| Minimize       | CSSO | -      | UglifyJS*  | X      |
+| Minimize       | CSSO | -      | UglifyES*  | X      |
 
-*: JS tech supports `--tech-options` that passed to UglifyJS.
+*: JS tech supports `--tech-options` that passed to UglifyES.
 ```
 $ borschik --input=myfile.js --tech-options='{"uglify":{"output":{"max_line_len": 100},"warnings":true}}'
 ```

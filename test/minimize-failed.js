@@ -49,7 +49,6 @@ describe('Useful info in case of failed minimize:', function() {
     });
 
     it('should reject with error when process string (js)', function() {
-
         // proccess it
         return BORSCHIK
             .api({
@@ -60,7 +59,7 @@ describe('Useful info in case of failed minimize:', function() {
                 'tech': 'js'
             })
             .then(function() {
-                return VOW.reject('passed');
+                return VOW.reject(new Error('passed'));
             }, function() {
                 return VOW.resolve();
             });

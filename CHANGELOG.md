@@ -1,3 +1,7 @@
+# 2.0.0
+
+* Switch to `uglify-es` to support ES6 (@stochastical [#141]).
+
 # 1.7.1
 
 * Fixed path processing in Windows (@raulleo [#139]).

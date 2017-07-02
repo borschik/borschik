@@ -1,3 +1,14 @@
+# 1.7.1
+
+* Fixed path processing in Windows (@raulleo [#139]).
+
+### Dependencies
+
+* `uglify-js` updated to `2.8.29`
+* `coa` updated to `1.0.3`
+* `minimatch` updated to `3.0.4`
+* `vow` updated to `0.4.16`
+
 # 1.7.0
 
 * Freeze hash function was moved to separate package [borschik-hash](https://github.com/borschik/borschik-hash) (@blond [#132]).

@@ -276,7 +276,7 @@ function testJS(tech, dir, inPath, outPath, okPath) {
 }
 
 describe('UglifyJS yes, tech js', function() {
-    testJS('js', 'uglifyjs_test', 'test.js', '_test.js', 'ok_js.js');
+    testJS('js', 'uglifyes_test', 'test.js', '_test.js', 'ok_js.js');
 });
 
 describe('freeze AlphaImageLoader from .css (-t css)', function() {

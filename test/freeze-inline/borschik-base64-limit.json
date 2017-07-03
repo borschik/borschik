@@ -1,0 +1,12 @@
+{
+    "paths" : {
+        "_": "//yandex.st/prj/_"
+    },
+    "freeze_paths": {
+        "./**": {
+            "inliningType": "base64",
+            "inliningLimit": 1024,
+            "freezePath": "_"
+        }
+    }
+}

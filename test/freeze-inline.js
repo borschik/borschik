@@ -61,6 +61,17 @@ describe('freeze-inline:', function() {
 
     });
 
+    describe('base64 (limit 1kb): ', function() {
+
+        beforeEach(function() {
+            var config = FS.readFileSync(PATH.resolve(basePath, 'borschik-base64-limit.json'));
+            FS.writeFileSync(configPath, config);
+        });
+
+        generateTests('base64-limit');
+
+    });
+
     function generateTests(testSuffix) {
         TESTS.forEach(function(test) {
 

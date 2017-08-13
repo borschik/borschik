@@ -50,6 +50,20 @@ describe('freeze-inline:', function() {
 
     });
 
+    describe('encodeURIComponentSvg: ', function() {
+
+        beforeEach(function() {
+            var config = FS.readFileSync(PATH.resolve(basePath, 'borschik-encodeURIComponentSvg.json'));
+            FS.writeFileSync(configPath, config);
+        });
+
+        generateTests('encodeURIComponentSvg', [
+            {name: 'should inline svg image in css', file: 'svg.css'},
+            {name: 'should inline svg image in js', file: 'svg.js'}
+        ]);
+
+    });
+
     describe('encodeURI: ', function() {
 
         beforeEach(function() {
@@ -61,8 +75,8 @@ describe('freeze-inline:', function() {
 
     });
 
-    function generateTests(testSuffix) {
-        TESTS.forEach(function(test) {
+    function generateTests(testSuffix, tests) {
+        (tests || TESTS).forEach(function(test) {
 
             var input = PATH.resolve(basePath, test.file);
             var ext = PATH.extname(input);

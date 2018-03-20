@@ -1,3 +1,8 @@
+# 1.8.0
+
+* Optimization for inlined SVG size (@sergcen [#144]).
+
+
 # 1.7.1
 
 * Fixed path processing in Windows (@raulleo [#139]).

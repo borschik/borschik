@@ -38,3 +38,5 @@ function die() {
 }).call(this);
 
 //# sourceMappingURL=coffee.js.map
+
+//# sourceMappingURL=coffee-out.js.map

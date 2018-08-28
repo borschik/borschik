@@ -123,12 +123,39 @@ describe('js-source-maps:', function() {
                         inputSourceMap: 'file',
                         outputSourceMap: 'file',
                         outputSourceMapRoot: basePath,
-                        outputSourceMapFilename: 'string-input-out.js'
+                        outputSourceMapFilename: 'string-input-out.js',
+                        outputSourceMapComment: false
                     }
                 })
                 .spread(function(content, sourceMap) {
                     assert.equal(content, 'foo\n/* b.js begin */\nbar\n/* b.js end */\n\nbaz\n')
                     assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;AACA,AADA;AACA,ACDA,GDAA;AACA;AACA,AAFA;AACA;AACA","file":"string-input-out.js"}')
+                    done()
+                })
+                .fail(function(error) {
+                    done('assert error: ' + error);
+                });
+        });
+
+        it(test.name + ' and optionally inline in the source', function(done) {
+            borschik
+                .api({
+                    comments: true,
+                    freeze: false,
+                    basePath: basePath,
+                    baseFilename: 'base.js',
+                    inputString: 'foo\n/* borschik:include:./b.js */\nbaz\n',
+                    minimize: false,
+                    tech: 'js',
+                    techOptions: {
+                        inputSourceMap: 'file',
+                        outputSourceMap: 'inline',
+                        outputSourceMapRoot: basePath,
+                        outputSourceMapFilename: 'string-input-out.js'
+                    }
+                })
+                .spread(function(content) {
+                    assert.equal(content, 'foo\n/* b.js begin */\nbar\n/* b.js end */\n\nbaz\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UuanMiLCJiLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0EsQUFEQTtBQUNBLEFDREEsR0RBQTtBQUNBO0FBQ0EsQUFGQTtBQUNBO0FBQ0EiLCJmaWxlIjoic3RyaW5nLWlucHV0LW91dC5qcyJ9')
                     done()
                 })
                 .fail(function(error) {

@@ -33,9 +33,9 @@ describe('js-source-maps:', function() {
                     tech: 'js',
                     techOptions: {
                         inputSourceMap: 'file',
-                        outputSourceMap: 'file',
-                        outputSourceMapRoot: basePath,
-                        outputSourceMapFilename: 'coffee-out.js'
+                        sourceMap: 'file',
+                        sourceMapRoot: basePath,
+                        sourceMapFilename: 'coffee-out.js'
                     }
                 })
                 .then(function() {
@@ -78,9 +78,9 @@ describe('js-source-maps:', function() {
                     tech: 'js',
                     techOptions: {
                         inputSourceMap: 'file',
-                        outputSourceMap: 'file',
-                        outputSourceMapRoot: basePath,
-                        outputSourceMapFilename: 'coffee-min-out.js'
+                        sourceMap: 'file',
+                        sourceMapRoot: basePath,
+                        sourceMapFilename: 'coffee-min-out.js'
                     }
                 })
                 .then(function() {
@@ -121,10 +121,10 @@ describe('js-source-maps:', function() {
                     tech: 'js',
                     techOptions: {
                         inputSourceMap: 'file',
-                        outputSourceMap: 'file',
-                        outputSourceMapRoot: basePath,
-                        outputSourceMapFilename: 'string-input-out.js',
-                        outputSourceMapComment: false
+                        sourceMap: 'file',
+                        sourceMapRoot: basePath,
+                        sourceMapFilename: 'string-input-out.js',
+                        sourceMapURL: false
                     }
                 })
                 .spread(function(content, sourceMap) {
@@ -149,9 +149,9 @@ describe('js-source-maps:', function() {
                     tech: 'js',
                     techOptions: {
                         inputSourceMap: 'file',
-                        outputSourceMap: 'inline',
-                        outputSourceMapRoot: basePath,
-                        outputSourceMapFilename: 'string-input-out.js'
+                        sourceMap: 'inline',
+                        sourceMapRoot: basePath,
+                        sourceMapFilename: 'string-input-out.js'
                     }
                 })
                 .spread(function(content) {

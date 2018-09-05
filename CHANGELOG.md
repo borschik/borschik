@@ -1,3 +1,7 @@
+# 2.1.0-rc.1
+
+* Source map support
+
 # 2.0.0
 
 * Switch to `uglify-es` to support ES6 (@stochastical [#141]).

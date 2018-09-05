@@ -20,6 +20,8 @@
     "csso": "^3.1.1",
     "inherit": "2.2.6",
     "minimatch": "3.0.4",
+    "source-map": "0.6.1",
+    "source-map-resolve": "0.5.2",
     "uglify-es": "^3.0.22",
     "vow": "0.4.16",
     "vow-fs": "0.3.6"

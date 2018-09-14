@@ -32,7 +32,7 @@ describe('js-source-maps:', function() {
             })
             .spread(function(content, sourceMap) {
                 assert.equal(content, 'foo\nbar\nbaz\n')
-                assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;AACA,ACDA,GDCA;AACA;AACA","file":"string-input-out.js"}')
+                assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;ACAA;ADEA","file":"string-input-out.js"}')
                 done()
             })
             .fail(function(error) {
@@ -58,7 +58,7 @@ describe('js-source-maps:', function() {
                 }
             })
             .spread(function(content) {
-                assert.equal(content, 'foo\nbar\nbaz\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UuanMiLCJiLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0EsQUNEQSxHRENBO0FBQ0E7QUFDQSIsImZpbGUiOiJzdHJpbmctaW5wdXQtb3V0LmpzIn0=')
+                assert.equal(content, 'foo\nbar\nbaz\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UuanMiLCJiLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FDQUE7QURFQSIsImZpbGUiOiJzdHJpbmctaW5wdXQtb3V0LmpzIn0=')
                 done()
             })
             .fail(function(error) {
@@ -93,10 +93,10 @@ describe('js-source-maps:', function() {
                         fs.readFileSync(output, 'utf-8'),
                         fs.readFileSync(expect, 'utf-8')
                     );
-                    // assert.equal(
-                    //     fs.readFileSync(output + '.map', 'utf-8'),
-                    //     fs.readFileSync(expect + '.map', 'utf-8')
-                    // );
+                    assert.equal(
+                        fs.readFileSync(output + '.map', 'utf-8'),
+                        fs.readFileSync(expect + '.map', 'utf-8')
+                    );
                     done();
                 } catch(e) {
                     done(e);

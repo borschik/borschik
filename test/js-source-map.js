@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('fs');
 var borschik = require('..');
 
-describe.only('js-source-maps:', function() {
+describe('js-source-maps:', function() {
     const basePath = path.resolve(__dirname, 'js-source-map');
 
     afterEach(function(cb) {

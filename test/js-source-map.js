@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('fs');
 var borschik = require('..');
 
-describe('js-source-maps:', function() {
+describe.only('js-source-maps:', function() {
     const basePath = path.resolve(__dirname, 'js-source-map');
 
     afterEach(function(cb) {
@@ -15,7 +15,7 @@ describe('js-source-maps:', function() {
     it('builds source map correctly when input is a string', function(done) {
         borschik
             .api({
-                comments: false,
+                comments: true,
                 freeze: false,
                 basePath: basePath,
                 baseFilename: 'base.js',
@@ -31,8 +31,8 @@ describe('js-source-maps:', function() {
                 }
             })
             .spread(function(content, sourceMap) {
-                assert.equal(content, 'foo\nbar\nbaz\n')
-                assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;ACAA,GDCA;AACA","file":"string-input-out.js"}')
+                assert.equal(content, 'foo\n/* b.js begin */\nbar\n/* b.js end */\n\nbaz\n')
+                assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;AACA;ACDA,GDCA;AAAA;AAAA;AACA","file":"string-input-out.js"}')
                 done()
             })
             .fail(function(error) {

@@ -19,7 +19,7 @@ describe('js-source-maps:', function() {
                 freeze: false,
                 basePath: basePath,
                 baseFilename: 'base.js',
-                inputString: 'foo\n/* borschik:include:./b.js */\nbaz\n',
+                inputString: 'foo\n/* borschik:include:./a.js */\n/* borschik:include:./b.js */\nbaz\n',
                 minimize: false,
                 tech: 'js',
                 techOptions: {
@@ -31,8 +31,8 @@ describe('js-source-maps:', function() {
                 }
             })
             .spread(function(content, sourceMap) {
-                assert.equal(content, 'foo\n/* b.js begin */\nbar\n/* b.js end */\n\nbaz\n')
-                assert.equal(sourceMap, '{"version":3,"sources":["base.js","b.js"],"names":[],"mappings":"AAAA;AACA;ACDA,GDCA;AAAA;AAAA;AACA","file":"string-input-out.js"}')
+                assert.equal(content, 'foo\n/* a.js begin */\nconst a = \'foo\';\n\n/* a.js end */\n\n/* b.js begin */\nbar\n/* b.js end */\n\nbaz\n')
+                assert.equal(sourceMap, '{"version":3,"sources":["base.js","a.js","b.js"],"names":[],"mappings":"AAAA;AACA;ACDA;ADCA;AAAA;AAAA;AACA;AEFA,GFEA;AAAA;AAAA;AACA","file":"string-input-out.js"}')
                 done()
             })
             .fail(function(error) {

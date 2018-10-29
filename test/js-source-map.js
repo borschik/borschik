@@ -253,4 +253,52 @@ describe('js-source-maps:', function() {
                 done('assert error: ' + error);
             });
     });
+
+    it('preserves original source map when minimize is set to true and minifySourceMap is set to false', function(done) {
+        var file = 'coffee.js';
+        var input = path.resolve(basePath, file);
+        var output = path.resolve(basePath, file.replace('.js', '-origsm-min-out.js'));
+        var expect = path.resolve(basePath, file.replace('.js', '-origsm-min-expect.js'));
+
+        borschik
+            .api({
+                comments: false,
+                freeze: false,
+                input: input,
+                minimize: true,
+                output: output,
+                tech: 'js',
+                techOptions: {
+                    inputSourceMap: 'file',
+                    sourceMap: 'file',
+                    sourceMapRoot: basePath,
+                    sourceMapFilename: 'coffee-min-out.js',
+                    minifySourceMap: false
+                }
+            })
+            .then(function() {
+                try {
+                    assert.equal(
+                        fs.readFileSync(output, 'utf-8'),
+                        fs.readFileSync(expect, 'utf-8')
+                    );
+                    assert.equal(
+                        fs.readFileSync(output + '.map', 'utf-8'),
+                        fs.readFileSync(expect + '.map', 'utf-8')
+                    );
+                    done();
+                } catch(e) {
+                    done(e);
+                }
+            }, function(error) {
+                done([
+                    'borschik error',
+                    error.message,
+                    error.stack
+                ].join('\n'));
+            })
+            .fail(function(error) {
+                done('assert error: ' + error);
+            });
+    });
 });

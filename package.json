@@ -1,7 +1,7 @@
 {
   "name": "borschik",
   "description": "Extendable builder for text-based file formats",
-  "version": "2.1.0-rc.1",
+  "version": "2.1.0-rc.2",
   "homepage": "http://github.com/borschik/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "repository": {

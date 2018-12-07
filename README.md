@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/borschik/borschik.svg)](https://david-dm.org/borschik/borschik)
 
 
-#English
+# English
 borschik is an extendable builder for text-based file formats.
 It's main purpose is the assembly of static files for web projects (CSS, JS, etc.).
 
@@ -19,7 +19,7 @@ It's main purpose is the assembly of static files for web projects (CSS, JS, etc
 
 [Article at bem.info](http://bit.ly/en-borschik)
 
-#Русский
+# Русский
 borschik — это расширяемый сборщик файлов текстовых форматов.
 Его основной задачей является сборка статических файлов веб-проектов (CSS, JS
 и т.д.).

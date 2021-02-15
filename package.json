@@ -1,7 +1,7 @@
 {
-  "name": "borschik",
+  "name": "@mrmeison/borschik",
   "description": "Extendable builder for text-based file formats",
-  "version": "2.1.0-rc.3",
+  "version": "0.0.1",
   "homepage": "http://github.com/borschik/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "repository": {
@@ -9,7 +9,10 @@
     "url": "git://github.com/borschik/borschik.git"
   },
   "directories": {
-    "lib": "./lib"
+    "lib": "./lib",
+    "test": "./test",
+    "bin": "./bin",
+    "doc": "./docs"
   },
   "bin": {
     "borschik": "./bin/borschik"
@@ -25,6 +28,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
+    "eslint": "^7.20.0",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
     "vow": "0.4.16"

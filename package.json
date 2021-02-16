@@ -1,7 +1,7 @@
 {
   "name": "borschik",
   "description": "Extendable builder for text-based file formats",
-  "version": "2.1.0-rc.3",
+  "version": "2.2.0",
   "homepage": "http://github.com/borschik/borschik",
   "author": "Sergey Berezhnoy <veged@ya.ru> (http://github.com/veged)",
   "repository": {
@@ -9,7 +9,10 @@
     "url": "git://github.com/borschik/borschik.git"
   },
   "directories": {
-    "lib": "./lib"
+    "lib": "./lib",
+    "test": "./test",
+    "bin": "./bin",
+    "doc": "./docs"
   },
   "bin": {
     "borschik": "./bin/borschik"
@@ -18,25 +21,25 @@
     "borschik-hash": "1.1.1",
     "coa": "1.0.3",
     "csso": "^3.1.1",
-    "inherit": "2.2.6",
     "minimatch": "3.0.4",
     "source-map": "0.6.1",
     "source-map-resolve": "0.5.2",
-    "uglify-es": "^3.0.22",
-    "vow": "0.4.16",
-    "vow-fs": "0.3.6"
+    "uglify-es": "^3.0.22"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
+    "eslint": "^7.20.0",
     "mocha": "^3.4.2",
-    "nyc": "^11.0.2"
+    "nyc": "^11.0.2",
+    "vow": "0.4.16"
   },
   "scripts": {
     "test": "nyc mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
-  "engines": [
-    "node >= 0.10.0"
-  ],
+  "engines": {
+    "node": "12.18.1",
+    "npm": "6.14.5"
+  },
   "license": "MIT"
 }

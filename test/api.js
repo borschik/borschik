@@ -43,14 +43,13 @@ describe('API', function() {
 
         beforeEach(function() {
             var base = require('../lib/tech');
-            var that = this;
 
             this.emptyTech = {
-                Tech: base.Tech.inherit({
-                    process: function() {
+                Tech: class extends base.Tech {
+                    async process() {
                         return VOW.resolve(this.opts);
                     }
-                })
+                }
             }
         });
 

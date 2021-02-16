@@ -1,3 +1,10 @@
+# 3.0.0
+
+* All `proccess*`-methods are async now.
+* `node` updated to 12 version.
+* `vow` replaced with native `Promise`.
+* `inherit` replaced with native classes.
+
 # 2.1.0-rc.1
 
 * Source map support

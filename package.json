@@ -21,7 +21,7 @@
     "borschik-hash": "1.1.1",
     "coa": "1.0.3",
     "csso": "^3.1.1",
-    "minimatch": "3.0.4",
+    "minimatch": "3.0.5",
     "source-map": "0.6.1",
     "source-map-resolve": "0.5.2",
     "uglify-es": "^3.0.22"

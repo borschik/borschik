@@ -6,6 +6,7 @@ matrix:
   include:
     - node_js: "12"
     - node_js: "14"
+    - node_js: "18"
       env: COVERALLS=1
 
 after_success:
